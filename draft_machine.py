@@ -1,6 +1,8 @@
 import os
 import re
 import sys
+import time
+import random
 from pathlib import Path
 from typing import Any
 
@@ -146,6 +148,29 @@ def _build_model():
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
+def _call_with_retry(client, model, contents, config, max_retries=3):
+    """Call the Gemini API with exponential backoff retry on 429 errors."""
+    for attempt in range(1, max_retries + 1):
+        try:
+            return client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config,
+            )
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+                if attempt < max_retries:
+                    wait = (2 ** attempt) + random.uniform(0, 1)
+                    print(f"Quota exceeded (attempt {attempt}/{max_retries}). Retrying in {wait:.1f}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"Quota still exceeded after {max_retries} attempts. Raising error.")
+                    raise
+            else:
+                raise
+
+
 def draft_reply(thread: dict[str, Any]) -> str:
     """Generate a draft reply for `thread` and return only the body text.
 
@@ -175,7 +200,8 @@ def draft_reply(thread: dict[str, Any]) -> str:
 
     try:
         client = _build_model()
-        response = client.models.generate_content(
+        response = _call_with_retry(
+            client,
             model=MODEL_NAME,
             contents=combined_user,
             config=types.GenerateContentConfig(

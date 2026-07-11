@@ -1,5 +1,7 @@
 import os
 import json
+import time
+import random
 from dotenv import load_dotenv
 # Upgraded to the current Google GenAI SDK package
 from google import genai
@@ -9,6 +11,29 @@ load_dotenv()
 
 # Initialize the new SDK client syntax
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+
+
+def _call_with_retry(client, model, contents, config, max_retries=3):
+    """Call the Gemini API with exponential backoff retry on 429 errors."""
+    for attempt in range(1, max_retries + 1):
+        try:
+            return client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config,
+            )
+        except Exception as e:
+            error_str = str(e)
+            if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+                if attempt < max_retries:
+                    wait = (2 ** attempt) + random.uniform(0, 1)
+                    print(f"Quota exceeded (attempt {attempt}/{max_retries}). Retrying in {wait:.1f}s...")
+                    time.sleep(wait)
+                else:
+                    print(f"Quota still exceeded after {max_retries} attempts. Raising error.")
+                    raise
+            else:
+                raise
 
 
 def triage_inbox(threads: list) -> list:
@@ -51,7 +76,8 @@ def triage_inbox(threads: list) -> list:
 
     try:
         # Request a strict structured JSON array back from Gemini 2.5 Flash
-        response = client.models.generate_content(
+        response = _call_with_retry(
+            client,
             model="gemini-2.5-flash",
             contents=prompt,
             config=types.GenerateContentConfig(
