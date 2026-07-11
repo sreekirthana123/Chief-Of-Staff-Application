@@ -124,8 +124,8 @@ def build_mcp_plan(max_results: int = DEFAULT_MAX_RESULTS) -> dict:
     Build a structured execution plan for the Gmail MCP server.
 
     The plan contains two steps:
-      1. search_emails  — fetch message IDs from the inbox
-      2. read_email     — fetch full details for each message
+    1. search_emails  — fetch message IDs from the inbox
+    2. read_email     — fetch full details for each message
 
     Returns a dict that can be consumed by an MCP orchestrator.
     """
@@ -212,6 +212,13 @@ def _build_gmail_service():
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())  # type: ignore[union-attr]
+            # Save refreshed token back to file (if running locally)
+            if os.path.exists(os.path.dirname(token_path)):
+                try:
+                    with open(token_path, "w") as f:
+                        f.write(creds.to_json())
+                except Exception:
+                    pass  # Don't fail if we can't save the token
         else:
             # Try to load credentials from Streamlit secrets first, fallback to file
             try:
@@ -239,7 +246,12 @@ def _build_gmail_service():
                         "https://www.googleapis.com/auth/calendar"
                     ],
                 )
-            creds = flow.run_local_server(port=0)
+            
+            try:
+                creds = flow.run_local_server(port=0)
+                # Save token after successful authentication
+                with open(token_path, "w") as f:
+                    f.write(creds.to_json())
         except Exception as e:
             # In cloud environments, local server won't work - provide instructions
             if "could not locate runnable browser" in str(e) or "No web browser found" in str(e):
@@ -261,8 +273,6 @@ def _build_gmail_service():
                 return None
             else:
                 raise e
-        with open(token_path, "w") as f:
-            f.write(creds.to_json())
 
     return build("gmail", "v1", credentials=creds)
 
