@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-07-09T12:36:05.002096",
+    "draft": "Hi Elena,\n\nThanks for the heads-up on the Q3 review and the request for the Onboarding rewrite update.\n\nThe Onboarding rewrite is in the testing phase, with core",
+    "thread_subject": "Q3 Roadmap Review - need your input by Friday",
+    "char_count": 161,
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-07-09T12:39:31.179551",
+    "draft": "Hi Meera,\n\nThis is a strong proposal. The agentic loop design makes sense, and the scoping is realistic for the timeline.\n\nA couple of thoughts:\n- The tool-calling layer",
+    "thread_subject": "Re: Project Proposal \u2014 Agentic Workflow System",
+    "char_count": 169,
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-07-09T12:43:25.551660",
+    "draft": "Hi Elena,\n\nThanks for the request for input on the Onboarding rewrite for the Q3 review.\n\nThe rewrite is in the final testing phase, with core flows stable. The biggest risk",
+    "thread_subject": "Q3 Roadmap Review - need your input by Friday",
+    "char_count": 173,
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-07-09T14:36:32.091624",
+    "draft": "Hi Meera,\n\nFollowing up on the proposal, the agentic loop design makes sense, and the scoping is realistic for the timeline.\n\nA couple of thoughts on the technical feasibility:",
+    "thread_subject": "Re: Project Proposal \u2014 Agentic Workflow System",
+    "char_count": 176,
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-07-09T15:10:34.964594",
+    "draft": "Hi Elena,\n\nThanks for the heads-up on the Q3 roadmap review.\n\nThe Onboarding rewrite is in final testing for core logic. The primary risk is integration stability with the legacy authentication system, which requires prioritized access to the dev environment for comprehensive testing.\n\nCould you confirm the process for securing that dev environment access?\n\nBest,\nKirthana\nAI/ML Engineer | JBIET",
+    "thread_subject": "Q3 Roadmap Review - need your input by Friday",
+    "char_count": 397,
+    "model": "gemini-2.5-flash"
+  }
+]

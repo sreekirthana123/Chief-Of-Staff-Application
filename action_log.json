@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "2026-07-11T09:43:38.918044+00:00",
+    "action_type": "sent",
+    "thread_subject": "IMPORTANT: Project Review & Alignment \u2013 Chief of Staff Automation App",
+    "detail": "Email sent successfully",
+    "id": "19f508cfb248c34f"
+  },
+  {
+    "timestamp": "2026-07-11T09:58:18.029695+00:00",
+    "action_type": "sent",
+    "thread_subject": "IMPORTANT: Key Project Details & Alignment Sync \u2013 Chief of Staff Project",
+    "detail": "Email sent successfully",
+    "id": "19f509988ee66bbb"
+  },
+  {
+    "timestamp": "2026-07-11T10:09:38.482900+00:00",
+    "action_type": "sent",
+    "thread_subject": "DISCUSSION: Fresh Approaches to Our Technical Hiring Loop",
+    "detail": "Email sent successfully",
+    "id": "19f50a549bc41a56"
+  },
+  {
+    "timestamp": "2026-07-11T10:20:10.194824+00:00",
+    "action_type": "sent",
+    "thread_subject": "Re: DISCUSSION: Fresh Approaches to Our Technical Hiring Loop",
+    "detail": "Email sent successfully",
+    "id": "19f50a549bc41a56"
+  },
+  {
+    "timestamp": "2026-07-11T10:41:49.865887+00:00",
+    "action_type": "sent",
+    "thread_subject": "Your Artificial Intelligence and Machine Learning Qualifier Test Results Are Now Available!",
+    "detail": "Email sent successfully",
+    "id": "19f50baa0608cce6"
+  }
+]

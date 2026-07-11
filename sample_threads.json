@@ -1,0 +1,57 @@
+[
+  {
+    "id": "thread_001",
+    "subject": "URGENT: Production API returning 500 errors - immediate attention needed",
+    "messages": [
+      {
+        "from": "Marcus Chen <marcus.chen@jbiot.ai>",
+        "date": "2026-07-09 09:15",
+        "body": "Hi Kirthana,\n\nOur production API has been returning 500 errors for the past 30 minutes. The monitoring dashboard shows 87% failure rate on all model inference endpoints. This is impacting our customers in Europe.\n\nCan you investigate the root cause and provide an ETA for resolution? Engineering team is standing by.\n\nThanks,\nMarcus\nEngineering Lead"
+      }
+    ]
+  },
+  {
+    "id": "thread_002",
+    "subject": "Q3 Roadmap Feedback Requested - due this Friday",
+    "messages": [
+      {
+        "from": "Priya Sharma <priya.sharma@company.com>",
+        "date": "2026-07-08 14:30",
+        "body": "Hi Kirthana,\n\nI'm finalizing the Q3 roadmap deck and would appreciate your input on the AI/ML initiatives. Specifically, I'd like your thoughts on:\n\n1. The Onboarding redesign timeline - the 6-week estimate seems aggressive\n2. Resource allocation for the recommendation engine v2\n3. Your bandwidth for the Q4 planning sessions\n\nCould you share a brief paragraph on the top priority and any risks you see? Need this by Friday's leadership meeting.\n\nBest,\nPriya\nVP of Engineering"
+      }
+    ]
+  },
+  {
+    "id": "thread_003",
+    "subject": "Weekly Standup Notes - Team Sync",
+    "messages": [
+      {
+        "from": "Alex Rivera <alex.rivera@jbiot.ai>",
+        "date": "2026-07-09 10:00",
+        "body": "Hi Kirthana,\n\nSharing the standup notes from yesterday's team sync. No action required from you - just keeping everyone in the loop.\n\nNotes:\n- Sprint 23: 85% complete, on track for Thursday release\n- New PR #142 from Sam needs review\n- Maria's model deployment scheduled for tomorrow\n- Next retro: Friday 2 PM\n\nThanks,\nAlex"
+      }
+    ]
+  },
+  {
+    "id": "thread_004",
+    "subject": "Vendor Contract Renewal - CloudSync Solutions",
+    "messages": [
+      {
+        "from": "Sarah Kim <sarah.kim@cloudsync.com>",
+        "date": "2026-07-07 11:45",
+        "body": "Hi Kirthana,\n\nFollowing up on our conversation last week regarding the CloudSync vendor contract renewal. The current contract expires July 15th.\n\nWe've prepared a renewal package with 15% volume discount locked in. Legal has the documents ready to send over. Would you like me to proceed with the renewal terms, or should we discuss alternatives?\n\nLet me know by Wednesday so we can meet the renewal deadline.\n\nRegards,\nSarah\nAccount Manager"
+      }
+    ]
+  },
+  {
+    "id": "thread_005",
+    "subject": "Meeting Request: AI Feature Review - New Search Capability",
+    "messages": [
+      {
+        "from": "David Torres <david.torres@company.com>",
+        "date": "2026-07-09 08:30",
+        "body": "Hi Kirthana,\n\nWould you be available for a 30-minute review of the new AI-powered search feature this Friday? Product team wants to walk through the prototype and get your technical feedback before the customer beta.\n\nAgenda:\n- Demo of semantic search implementation\n- Discussion of latency metrics\n- Q&A on model architecture\n\nSuggest 2 PM or 4 PM - let me know what works.\n\nThanks,\nDavid\nProduct Manager"
+      }
+    ]
+  }
+]
