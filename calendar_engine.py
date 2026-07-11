@@ -135,6 +135,26 @@ def build_calendar_service():
                 port=8080,
                 open_browser=True,
             )
+        except Exception as e:
+            # In cloud environments, local server won't work - provide instructions
+            if "could not locate runnable browser" in str(e) or "No web browser found" in str(e):
+                import streamlit as st
+                st.error("""
+                **Authentication Required**
+                
+                This app needs to authenticate with Google APIs. In a cloud environment, 
+                you need to complete the OAuth flow locally first:
+                
+                1. Run this app locally on your computer
+                2. Complete the Google OAuth login when prompted
+                3. This will create a `token.json` file
+                4. Upload the `token.json` file to your cloud deployment
+                
+                Alternatively, set up service account credentials for production use.
+                """)
+                raise e
+            else:
+                raise e
 
             print("[DEBUG] OAuth completed")
 

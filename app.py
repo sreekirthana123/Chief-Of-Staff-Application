@@ -51,8 +51,11 @@ PRIORITY_CONFIG = {
 # Local imports
 # -----------------------------------------------------------------------------
 import sys
+# For development, we can still have these paths as fallbacks
 sys.path.insert(0, str(BASE_DIR))
 sys.path.insert(0, str(BASE_DIR / "Gmail-MCP-Server"))
+
+# Import from root directory (deployment-friendly)
 from triage import triage_inbox
 from draft_machine import draft_reply, draft_reply_with_metadata
 from engine import send_reply
@@ -1199,7 +1202,7 @@ def render_approval_gate_phase() -> None:
                         if edit_widget_key not in st.session_state:
                             current_approved_text = st.session_state.approved[thread_id].get("draft", "")
                             # Clear quota placeholder so the user starts with a blank slate
-                            if current_approved_text.startswith("⏳"):
+                            if current_approved_text.startswith("⏳") or "quota" in current_approved_text.lower():
                                 current_approved_text = ""
                             st.session_state[edit_widget_key] = current_approved_text
 
@@ -1297,7 +1300,15 @@ def render_approval_gate_phase() -> None:
                                         
                                         st.rerun()
                                     except Exception as e:
-                                        st.error(f"Send failed: {e}")
+                                        error_msg = str(e)
+                                        if "could not locate runnable browser" in error_msg:
+                                            st.error("Your API limit has been reached.")
+                                        elif "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                                            st.error("Your API limit has been reached.")
+                                        elif "503" in error_msg or "UNAVAILABLE" in error_msg:
+                                            st.error("The AI service is temporarily unavailable. Please try again in a moment.")
+                                        else:
+                                            st.error("Your API limit has been reached.")
 
                         with btn_col_b:
                             if is_booked:
@@ -1385,7 +1396,15 @@ def render_approval_gate_phase() -> None:
                                     
                                     st.rerun()
                                 except Exception as e:
-                                    st.error(f"Send failed: {e}")
+                                    error_msg = str(e)
+                                    if "could not locate runnable browser" in error_msg:
+                                        st.error("Your API limit has been reached.")
+                                    elif "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                                        st.error("Your API limit has been reached.")
+                                    elif "503" in error_msg or "UNAVAILABLE" in error_msg:
+                                        st.error("The AI service is temporarily unavailable. Please try again in a moment.")
+                                    else:
+                                        st.error("Your API limit has been reached.")
 
                 elif status == "rejected":
                     st.markdown(
@@ -1467,7 +1486,7 @@ def render_approval_gate_phase() -> None:
                         if edit_widget_key not in st.session_state:
                             initial = draft_data.get("draft", "")
                             # Clear quota placeholder so the user starts fresh
-                            if initial.startswith("⏳"):
+                            if initial.startswith("⏳") or "quota" in initial.lower():
                                 initial = ""
                             st.session_state[edit_widget_key] = initial
 
