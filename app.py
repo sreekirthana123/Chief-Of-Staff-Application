@@ -1409,7 +1409,7 @@ def render_approval_gate_phase() -> None:
                             st.success("📤 Sent successfully")
                         else:
                             if st.button("📤 Send", key=f"send_btn_{thread_id}",
-                                         use_container_width=True):
+                                        use_container_width=True):
                                 try:
                                     result = send_reply(
                                         thread_id=thread_id,
@@ -1524,7 +1524,7 @@ def render_approval_gate_phase() -> None:
                         )
 
                         if st.button("✅ Approve Edited Version", type="primary",
-                                     key=f"approve_edit_btn_{thread_id}"):
+                                    key=f"approve_edit_btn_{thread_id}"):
                             st.session_state.approved[thread_id] = {
                                 "draft": st.session_state[edit_widget_key],
                                 "thread": thread,
