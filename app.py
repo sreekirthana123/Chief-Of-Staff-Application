@@ -17,6 +17,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlparse
+from ui import render_aurora_landing_page
 
 import streamlit as st
 from google.oauth2.credentials import Credentials
@@ -1799,123 +1800,21 @@ def _handle_oauth_callback() -> bool:
 # Landing page (public-facing, no auth required)
 # -----------------------------------------------------------------------------
 def render_landing_page() -> None:
-    """Render the public landing page with app explanation and a real
-    "Sign in with Google" button that triggers the OAuth 2.0 Web flow."""
-    st.markdown(
-        """
-        <style>
-        .landing-container {
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 80px 24px 40px;
-        }
-        .landing-logo {
-            font-size: 4rem;
-            margin-bottom: 8px;
-        }
-        .landing-headline {
-            font-size: 2.2rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 20px;
-        }
-        .landing-explanation {
-            font-size: 1.1rem;
-            color: #b0b0b0;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-        .landing-footer {
-            margin-top: 60px;
-            font-size: 0.9rem;
-            color: #888;
-        }
-        .landing-footer a {
-            color: #4a9eff;
-            text-decoration: none;
-            margin: 0 12px;
-        }
-        .landing-footer a:hover {
-            text-decoration: underline;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        '<div class="landing-container">'
-        '<div class="landing-logo">✍️</div>'
-        '<div class="landing-headline">Chief of Staff AI:<br>Intelligent Triage for your Inbox</div>'
-        '<div class="landing-explanation">'
-        "This application connects securely to your Google account to help you "
-        "triage incoming emails, draft AI responses, and manage calendar schedules."
-        '</div>',
-        unsafe_allow_html=True,
-    )
-
-    # --- Real "Sign in with Google" button ---
+    """Handle OAuth flow setup and trigger the Aurora UI rendering from ui.py."""
+    
     app_url = _get_app_url()
-    # The redirect URI must exactly match what is registered in the Google
-    # Cloud Console for this OAuth client ID.  For a Web application client
-    # type (not "Desktop app") we register:
-    #   https://<app-name>.streamlit.app/
     redirect_uri = f"{app_url}/"
 
-    # Build the authorization URL the browser will send the user to
     flow = _make_flow(redirect_uri=redirect_uri)
-    # Let the library generate the URL (includes client_id, redirect_uri,
-    # scope, response_type=code, and a secure state param).
     auth_url, state = flow.authorization_url(
-        access_type="offline",      # so we get a refresh token
+        access_type="offline",      
         include_granted_scopes="true",
-        prompt="consent",           # force consent screen so we always get a refresh_token
+        prompt="consent",           
     )
     st.session_state["oauth_state"] = state
     st.session_state["oauth_verifier"] = flow.code_verifier
     _save_oauth_pkce(state, flow.code_verifier)
 
-    st.markdown(
-        f'<a href="{auth_url}" target="_blank" '
-        f'style="display:block; text-align:center; padding:12px 20px; '
-        f'background-color:#FF4B4B; color:white; border-radius:5px; '
-        f'text-decoration:none; font-weight:bold; width:100%; pointer-events:auto;">'
-        f'🔑 Sign in with Google'
-        f'</a>',
-        unsafe_allow_html=True,
-    )
-
-    st.markdown(
-        '<div class="landing-footer">'
-        '<a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/PRIVACY.md" target="_blank">Privacy Policy</a>'
-        '<a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/TERMS.md" target="_blank">Terms of Service</a>'
-        '</div>'
-        '</div>',
-        unsafe_allow_html=True,
-    )
-
-
-# -----------------------------------------------------------------------------
-# Main
-# -----------------------------------------------------------------------------
-def main() -> None:
-    # ── OAuth callback handling (runs on every page load) ──────────────
-    if _handle_oauth_callback():
-        st.rerun()
-
-    # ── Unauthenticated → show landing page ────────────────────────────
-    if not st.session_state.get("logged_in", False):
-        render_landing_page()
-        return
-
-    # ── Authenticated → full application ───────────────────────────────
-    render_sidebar()
-    if st.session_state.get("pipeline_running"):
-        render_pipeline_execution()
-    else:
-        render_phase(st.session_state.current_phase)
-
-
-if __name__ == "__main__":
-    main()
+    # Render the external UI component, passing the auth URL
+    from ui import render_aurora_landing_page
+    render_aurora_landing_page(auth_url)
