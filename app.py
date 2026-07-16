@@ -1970,75 +1970,75 @@ strong { color: #ffffff; font-weight: 600; }
 
     # --- HTML Structure ---
     st.markdown(
-f"""
+    f"""
 <div class="landing-wrapper">
-    
+
     <div class="glass-card">
-        <div class="card-title">Who I Am</div>
-        <p>I'm <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
-        <p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p>
+    <div class="card-title">Who I Am</div>
+    <p>I'm <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
+    <p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p>
     </div>
 
     <div class="hero-section">
-        <div class="hero-title">Chief of Staff AI</div>
-        <div class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</div>
-        <a href="{auth_url}" target="_top" class="google-btn">
-            🔑 Sign in with Google
-        </a>
+    <div class="hero-title">Chief of Staff AI</div>
+    <div class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</div>
+    <a href="{auth_url}" target="_top" class="google-btn">
+    🔑 Sign in with Google
+    </a>
     </div>
 
     <div class="glass-card">
-        <div class="card-title">What This Is</div>
-        <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent</strong>, <strong>Needs Reply</strong>, <strong>FYI</strong>, and <strong>Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p>
-        <p>Want to skip the manual steps? Hit the <strong>Run Full Pipeline</strong> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
+    <div class="card-title">What This Is</div>
+    <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent</strong>, <strong>Needs Reply</strong>, <strong>FYI</strong>, and <strong>Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p>
+    <p>Want to skip the manual steps? Hit the <strong>Run Full Pipeline</strong> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
     </div>
 
     <div class="glass-card">
-        <div class="card-title">Inside the Engine: The Four Phases</div>
-        <p>This application operates on a strict, transparent four-step pipeline:</p>
-        <ul>
-            <li><strong>Phase 1: Inbox & Triage</strong><br>The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message, assigning a strict priority level to each one.</li>
-            <li><strong>Phase 2: Draft Generation</strong><br>For any email flagged as <em>Urgent</em> or <em>Needs Reply</em>, the AI instantly generates a highly contextual, professional draft response.</li>
-            <li><strong>Phase 3: Approval Gate (Human-in-the-Loop)</strong><br><strong>Total Control.</strong> The AI generates the responses, but it never sends an email without your explicit permission. You are in the driver's seat with three options for every draft:
-                <ul>
-                    <li><strong>Regenerate:</strong> Don't like the AI's first attempt? Click this to generate a brand new response.</li>
-                    <li><strong>Edit:</strong> Jump in and manually tweak the text exactly how you want it.</li>
-                    <li><strong>Approve:</strong> Once the draft is perfect, approve it.</li>
-                </ul>
-                Only after you hit Approve will the <strong>Send</strong> button appear, allowing you to dispatch the email directly from the app. Mistakes do not make it to your outbox.
-            </li>
-            <li><strong>Phase 4: Export Proof</strong><br>A complete audit trail of the AI's work. Once your triage is complete, you can download a full Proof of Work report as a cleanly formatted <strong>Markdown</strong> or <strong>HTML file</strong>.</li>
-        </ul>
+    <div class="card-title">Inside the Engine: The Four Phases</div>
+    <p>This application operates on a strict, transparent four-step pipeline:</p>
+    <ul>
+    <li><strong>Phase 1: Inbox & Triage</strong><br>The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message, assigning a strict priority level to each one.</li>
+    <li><strong>Phase 2: Draft Generation</strong><br>For any email flagged as <em>Urgent</em> or <em>Needs Reply</em>, the AI instantly generates a highly contextual, professional draft response.</li>
+    <li><strong>Phase 3: Approval Gate (Human-in-the-Loop)</strong><br><strong>Total Control.</strong> The AI generates the responses, but it never sends an email without your explicit permission. You are in the driver's seat with three options for every draft:
+    <ul>
+    <li><strong>Regenerate:</strong> Don't like the AI's first attempt? Click this to generate a brand new response.</li>
+    <li><strong>Edit:</strong> Jump in and manually tweak the text exactly how you want it.</li>
+    <li><strong>Approve:</strong> Once the draft is perfect, approve it.</li>
+    </ul>
+    Only after you hit Approve will the <strong>Send</strong> button appear, allowing you to dispatch the email directly from the app. Mistakes do not make it to your outbox.
+    </li>
+    <li><strong>Phase 4: Export Proof</strong><br>A complete audit trail of the AI's work. Once your triage is complete, you can download a full Proof of Work report as a cleanly formatted <strong>Markdown</strong> or <strong>HTML file</strong>.</li>
+    </ul>
     </div>
 
     <div class="glass-card">
-        <div class="card-title">Smart Calendar Scheduling</div>
-        <p>More than just an email drafter, this agent understands time. If an incoming email asks for a meeting or proposes a time, the AI parses the request, checks your availability, and finds a free slot. Upon your approval, it automatically schedules the event and bookmarks it directly onto your <strong>Google Calendar</strong>.</p>
+    <div class="card-title">Smart Calendar Scheduling</div>
+    <p>More than just an email drafter, this agent understands time. If an incoming email asks for a meeting or proposes a time, the AI parses the request, checks your availability, and finds a free slot. Upon your approval, it automatically schedules the event and bookmarks it directly onto your <strong>Google Calendar</strong>.</p>
     </div>
 
     <div class="glass-card">
-        <div class="card-title">Architecture & Timeline</div>
-        <p>This agent is powered by a robust, modern tech stack designed for speed and security:</p>
-        <ul>
-            <li><strong>Core Logic:</strong> Python</li>
-            <li><strong>Frontend UI:</strong> Streamlit (Custom Aurora Glassmorphism)</li>
-            <li><strong>AI Engine:</strong> Google Gemini 2.5 Flash</li>
-            <li><strong>Cloud Infrastructure:</strong> Google Cloud Platform (OAuth 2.0 Web Flow)</li>
-            <li><strong>Integrations:</strong> Gmail API, Google Calendar API</li>
-        </ul>
-        <p>I architected, built, and deployed this entire system from the ground up in <strong>2 Weeks</strong>.</p>
+    <div class="card-title">Architecture & Timeline</div>
+    <p>This agent is powered by a robust, modern tech stack designed for speed and security:</p>
+    <ul>
+    <li><strong>Core Logic:</strong> Python</li>
+    <li><strong>Frontend UI:</strong> Streamlit (Custom Aurora Glassmorphism)</li>
+    <li><strong>AI Engine:</strong> Google Gemini 2.5 Flash</li>
+    <li><strong>Cloud Infrastructure:</strong> Google Cloud Platform (OAuth 2.0 Web Flow)</li>
+    <li><strong>Integrations:</strong> Gmail API, Google Calendar API</li>
+    </ul>
+    <p>I architected, built, and deployed this entire system from the ground up in <strong>2 Weeks</strong>.</p>
     </div>
 
     <div class="glass-card">
-        <div class="card-title">Connect With Me</div>
-        <div class="footer-links">
-            <a href="https://bold.pro/" target="_blank">Bold.pro</a>
-            <a href="https://www.linkedin.com/in/v-sree-kirthana/" target="_blank">LinkedIn</a>
-            <br><br>
-            <a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/PRIVACY.md" target="_blank" style="font-size:0.9em; font-weight:normal;">Privacy Policy</a>
-            <a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/TERMS.md" target="_blank" style="font-size:0.9em; font-weight:normal;">Terms & Conditions</a>
-        </div>
-        <p class="disclaimer">Note: This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.</p>
+    <div class="card-title">Connect With Me</div>
+    <div class="footer-links">
+    <a href="https://bold.pro/" target="_blank">Bold.pro</a>
+    <a href="https://www.linkedin.com/in/v-sree-kirthana/" target="_blank">LinkedIn</a>
+    <br><br>
+    <a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/PRIVACY.md" target="_blank" style="font-size:0.9em; font-weight:normal;">Privacy Policy</a>
+    <a href="https://raw.githubusercontent.com/sreekirthana123/Chief-Of-Staff-Application/master/TERMS.md" target="_blank" style="font-size:0.9em; font-weight:normal;">Terms & Conditions</a>
+    </div>
+    <p class="disclaimer">Note: This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.</p>
     </div>
 
 </div>
