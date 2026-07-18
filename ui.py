@@ -11,7 +11,6 @@ def render_aurora_landing_page(auth_url: str) -> None:
       .element-container > div {  /* For Streamlit widgets */
           font-size: 18px !important;
        }
-     </style>
         /* The Aurora Background */
         .stApp {
             background: 
