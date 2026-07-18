@@ -3,8 +3,18 @@ import streamlit as st
 def render_aurora_landing_page(auth_url: str) -> None:
     # --- CSS Injection ---
     st.markdown(
-        """
-        <style>
+    """
+    <style>
+      /* Increase font-size for ALL body texts */
+      p,
+      .markdown-text,
+      .element-container > div {  /* For Streamlit widgets */
+          font-size: 18px !important;
+       }
+     </style>
+    """,
+     unsafe_allow_html=True)
+
         /* The Aurora Background */
         .stApp {
             background: 
