@@ -74,7 +74,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         /* MASSIVE HEADINGS */
         .card-title {
-            font-size: 3.2rem; 
+            font-size: 5.2rem; 
             font-weight: 800;
             margin-bottom: 1.5rem;
             color: #9B72CB; 
@@ -106,7 +106,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         p, li {
             line-height: 1.65;
             color: #e2e8f0;
-            font-size: 1.3rem; 
+            font-size: 3.3rem; 
         }
         ul {
             margin-left: 2.2rem;
