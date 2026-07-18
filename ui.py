@@ -5,14 +5,6 @@ def render_aurora_landing_page(auth_url: str) -> None:
     st.markdown(
     """
     <style>
-      /* Increase font-size for ALL body texts AND lists */
-      p,
-      .markdown-text,
-      .element-container > div,
-      ul li,  /* Unordered lists */
-       ol li {  /* Ordered lists */ 
-          font-size: 27px !important;
-       }
         /* The Aurora Background */
         .stApp {
             background: 
@@ -128,8 +120,8 @@ def render_aurora_landing_page(auth_url: str) -> None:
             color: #a5b4fc;
             text-decoration: none;
             margin-right: 2rem;
-            font-weight: 600;
-            font-size: 3.35rem;
+            font-weight: 700;
+            font-size: 2rem !important;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
