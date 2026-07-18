@@ -8,7 +8,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         /* The Aurora Background */
         .stApp {
             background: 
-                radial-gradient(circle at 15% 100%, rgba(236, 72, 153, 0.65) 0%, transparent 65%),
+                radial-gradient(circle at 25% 100%, rgba(236, 72, 153, 0.65) 0%, transparent 65%),
                 radial-gradient(circle at 85% 100%, rgba(168, 85, 247, 0.45) 0%, transparent 50%),
                 radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.55) 0%, transparent 60%),
                 linear-gradient(180deg, #020617 0%, #0f172a 35%, #1e3a8a 70%, #174276 100%) !important;
@@ -67,14 +67,14 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         /* CLEAN HOVER (No rainbow, just a soft lift) */
         .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); 
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4); 
+            border: 1px solid rgba(355, 355, 355, 0.35);
         }
 
         /* MASSIVE HEADINGS */
         .card-title {
-            font-size: 3.2rem; 
+            font-size: 4.2rem; 
             font-weight: 800;
             margin-bottom: 1.5rem;
             color: #9B72CB; 
@@ -97,7 +97,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             line-height: 1.2;
         }
         .hero-subtitle {
-            font-size: 3.4rem; /* Huge subtitle */
+            font-size: 4.4rem; /* Huge subtitle */
             color: #cbd5e1;
             margin-bottom: 3.5rem;
         }
@@ -121,7 +121,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: none;
             margin-right: 2rem;
             font-weight: 600;
-            font-size: 4.35rem;
+            font-size: 2.35rem;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
@@ -129,7 +129,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: underline;
         }
         .disclaimer {
-            font-size: 4.15rem;
+            font-size: 3.15rem;
             color: #94a3b8;
             margin-top: 3.5rem;
             font-style: italic;
@@ -149,7 +149,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.6rem; 
+            font-size: 3.6rem; 
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
