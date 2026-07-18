@@ -32,7 +32,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
                 radial-gradient(2px 2px at 50px 160px, rgba(255,255,255,0.8), rgba(0,0,0,0));
             background-repeat: repeat;
             background-size: 200px 200px;
-            opacity: 0.6;
+            opacity: 0.8;
             z-index: 0;
             pointer-events: none;
             animation: fall 20s linear infinite;
