@@ -6,7 +6,8 @@ def render_aurora_landing_page(auth_url: str) -> None:
     """
     <style>
     p {
-        font-size: 60px;  
+        font-size: 18px !important;
+  
         line-height: 1.6;
      }
      ul li,
