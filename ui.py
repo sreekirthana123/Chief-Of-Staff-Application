@@ -249,7 +249,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """,
         unsafe_allow_html=True
     )
-    # 8. LEGAL FOOTER AND DISCLAIMER
+    # 8.CONNECT WITH ME
     st.markdown(
         """
         <div class="glass-card">
