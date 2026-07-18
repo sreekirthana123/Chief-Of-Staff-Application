@@ -1,8 +1,6 @@
 import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
-    """Renders the Aurora Glassmorphism landing page UI."""
-    
     # --- CSS Injection ---
     st.markdown(
         """
@@ -36,7 +34,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         #MainMenu, header, footer {visibility: hidden;}
 
-        /* 1. BIGGER BLOCKS: Expanded to 1100px width */
+        /* BIGGER BLOCKS: Expanded to 1100px width */
         .landing-wrapper {
             position: relative;
             z-index: 1;
@@ -47,11 +45,11 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         /* The Glass Card */
         .glass-card {
-            background: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)) padding-box,
-                        linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) border-box;
+            background: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) padding-box,
+                        linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)) border-box;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 3px solid transparent;
+            border: 3px solid transparent; /* Thick enough to see the beautiful gradient */
             border-radius: 24px;
             padding: 3.5rem; 
             margin-bottom: 2.5rem;
@@ -60,34 +58,34 @@ def render_aurora_landing_page(auth_url: str) -> None:
             background-size: 100% 100%, 100% 100%;
         }
 
-        /* 2. "AI MODE" SOFT PASTEL HOVER EFFECT */
+        /* GOOGLE "AI MODE" CIRCULAR FLOWING BORDER */
         .glass-card:hover {
             transform: translateY(-5px);
-            /* Adds a soft glowing halo behind the card */
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3), 0 0 25px rgba(197, 138, 249, 0.3); 
-            /* Google AI Colors: Soft Blue, Purple, Pink, Yellow, Green */
-            background: linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09)) padding-box,
-                        linear-gradient(90deg, #8ab4f8, #c58af9, #f28b82, #fde293, #81c995, #8ab4f8) border-box;
-            background-size: 100% 100%, 200% 100%;
-            animation: aiBorder 3s linear infinite;
+            /* Soft AI glow behind the card */
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3), 0 0 40px rgba(155, 114, 203, 0.25); 
+            /* Google AI Colors: Blue, Amethyst, Coral, Sunrise, Emerald */
+            background: linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)) padding-box,
+                        linear-gradient(115deg, #4285F4, #9B72CB, #D96570, #F4B400, #0F9D58, #4285F4) border-box;
+            background-size: 100% 100%, 300% 100%;
+            animation: googleAiFlow 3.5s linear infinite;
         }
 
-        @keyframes aiBorder {
-            0% { background-position: 0% 0%, 0% 0%; }
-            100% { background-position: 0% 0%, 200% 0%; }
+        @keyframes googleAiFlow {
+            0% { background-position: 0% 0%, 0% 50%; }
+            100% { background-position: 0% 0%, 100% 50%; }
         }
 
-        /* 3. HEADINGS IN A DIFFERENT COLOR AND BIGGER */
+        /* HEADINGS IN A DIFFERENT COLOR AND BIGGER */
         .card-title {
             font-size: 2.2rem; 
             font-weight: 800;
             margin-bottom: 1.2rem;
-            color: #8ab4f8; /* Soft blue to match the AI vibe */
+            color: #9B72CB; /* Soft Amethyst Purple to match AI vibe */
             border-bottom: 1px solid rgba(255,255,255,0.15);
             padding-bottom: 0.75rem;
         }
 
-        /* 4. BIGGER FONT SIZES */
+        /* BIGGER FONT SIZES */
         .hero-section {
             text-align: center;
             margin-bottom: 4rem;
@@ -149,7 +147,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             background: rgba(255, 255, 255, 0.12);
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.3rem; 
@@ -159,12 +157,19 @@ def render_aurora_landing_page(auth_url: str) -> None:
             cursor: pointer;
             pointer-events: auto;
         }
+        
         .google-btn:hover {
             background: rgba(255, 255, 255, 0.25);
-            border: 2px solid #8ab4f8; 
+            /* Animating Google AI Button Border */
+            border-color: transparent;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
+                              linear-gradient(115deg, #4285F4, #9B72CB, #D96570, #F4B400, #0F9D58, #4285F4);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            background-size: 100% 100%, 300% 100%;
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(138, 180, 248, 0.4); 
-            color: white;
+            box-shadow: 0 8px 30px rgba(155, 114, 203, 0.4); 
+            animation: googleAiFlow 3.5s linear infinite;
         }
         </style>
         """,
