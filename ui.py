@@ -65,6 +65,3 @@ def render_aurora_landing_page(auth_url: str) -> None:
             </div>
         </div>
     """, unsafe_allow_html=True)
-    ```
-
-Commit this to GitHub, do a **Hard Refresh** (`Ctrl + Shift + R`) on your app, and everything will be exactly as you wanted!
