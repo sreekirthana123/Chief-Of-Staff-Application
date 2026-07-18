@@ -18,7 +18,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             background: 
                 radial-gradient(circle at 15% 100%, rgba(236, 72, 153, 0.65) 0%, transparent 65%),
                 radial-gradient(circle at 85% 100%, rgba(168, 85, 247, 0.45) 0%, transparent 50%),
-                radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.55) 0%, transparent 60%),
+                radial-gradient(circle at 100% 100%, rgba(72, 189, 248, 0.55) 0%, transparent 60%),
                 linear-gradient(180deg, #020617 0%, #0f172a 35%, #1e3a8a 70%, #174276 100%) !important;
             background-attachment: fixed !important;
             color: #FAFAFA;
@@ -77,7 +77,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         .glass-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); 
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(355, 355, 355, 0.35);
         }
 
         /* MASSIVE HEADINGS */
