@@ -131,7 +131,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         .disclaimer {
             font-size: 3.15rem;
             color: #94a3b8;
-            margin-top: 3.5rem;
+            margin-top: 4.5rem;
             font-style: italic;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 1.5rem;
@@ -149,7 +149,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 3.6rem; 
+            font-size: 4.6rem; 
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
