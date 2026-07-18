@@ -5,15 +5,15 @@ def render_aurora_landing_page(auth_url: str) -> None:
     st.markdown(
     """
     <style>
-    p {
-        font-size: 30px !important;
-  
-        line-height: 1.6;
-     }
-     ul li,
-     ol li {
-         font-size::%;; margin-bottom::5%
-      }
+      /* Increase font-size for ALL body texts */
+      p,
+      .markdown-text,
+      .element-container > div {  /* For Streamlit widgets */
+          font-size: 18px !important;
+       }
+     </style>
+    """,
+     unsafe_allow_html=True)
         /* The Aurora Background */
         .stApp {
             background: 
