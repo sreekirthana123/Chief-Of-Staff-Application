@@ -5,6 +5,17 @@ def render_aurora_landing_page(auth_url: str) -> None:
     st.markdown(
         """
         <style>
+        st.markdown(
+    """
+    <style>
+    p {
+        font-size: 18px;  
+        line-height: 1.6;
+     }
+     ul li,
+     ol li {
+         font-size::%;; margin-bottom::5%
+      }
         /* The Aurora Background */
         .stApp {
             background: 
