@@ -99,7 +99,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         p, li {
             line-height: 1.9;
             color: #ffffff; 
-            font-size: 2rem; /* Scaled up text to be highly visible */
+            font-size: 2rem;
         }
         ul {
             margin-left: 3.5rem;
@@ -158,10 +158,62 @@ def render_aurora_landing_page(auth_url: str) -> None:
         unsafe_allow_html=True
     )
 
-    # --- HTML Structure ---
+    # --- Structural Layout Layout ---
+    st.markdown('<div class="landing-wrapper">', unsafe_allow_html=True)
+
+    # CHANGE 1: HERO SECTION MOVED TO THE ABSOLUTE TOP
     st.markdown(
-f"""
-<div class="landing-wrapper"><div class="glass-card"><div class="card-title">Who I Am</div><p>I'm <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p><p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p></div><div class="hero-section"><div class="hero-title">Chief of Staff AI</div><div class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</div><a href="{auth_url}" target="_top" class="google-btn">🔑 Sign in with Google</a></div><div class="glass-card"><div class="card-title">What This Is</div><p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent</strong>, <strong>Needs Reply</strong>, <strong>FYI</strong>, and <strong>Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p><p>Want to skip the manual steps? Hit the <strong>Run Full Pipeline</strong> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p></div><div class="glass-card"><div class="card-title">Inside the Engine: The Four Phases</div><p>This application operates on a strict, transparent four-step pipeline:</p><ul><li><strong>Phase 1: Inbox & Triage</strong><br>The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message, assigning a strict priority level to each one.</li><li><strong>Phase 2: Draft Generation</strong><br>For any email flagged as <em>Urgent</em> or <em>Needs Reply</em>, the AI instantly generates a highly contextual, professional draft response.</li><li><strong>Phase 3: Approval Gate (Human-in-the-Loop)</strong><br><strong>Total Control.</strong> The AI generates the responses, but it never sends an email without your explicit permission. You are in the driver's seat with three options for every draft:<ul><li><strong>Regenerate:</strong> Don't like the AI's first attempt? Click this to generate a brand new response.</li><li><strong>Edit:</strong> Jump in and manually tweak the text exactly how you want it.</li><li><strong>Approve:</strong> Once the draft is perfect, approve it.</li></ul>Only after you hit Approve will the <strong>Send</strong> button appear, allowing you to dispatch the email directly from the app. Mistakes do not make it to your outbox.</li><li><strong>Phase 4: Export Proof</strong><br>A complete audit trail of the AI's work. Once your triage is complete, you can download a full Proof of Work report as a cleanly formatted <strong>Markdown</strong> or <strong>HTML file</strong>.</li></ul></div><div class="glass-card"><div class="card-title">Smart Calendar Scheduling</div><p>More than just an email drafter, this agent understands time. If an incoming email asks for a meeting or proposes a time, the AI parses the request, checks your availability, and finds a free slot. Upon your approval, it automatically schedules the event and bookmarks it directly onto your <strong>Google Calendar</strong>.</p></div><div class="glass-card"><div class="card-title">Architecture & Timeline</div><p>This agent is powered by a robust, modern tech stack designed for speed and security:</p><ul><li><strong>Core Logic:</strong> Python</li><li><strong>Frontend UI:</strong> Streamlit (Custom Aurora Glassmorphism)</li><li><strong>AI Engine:</strong> Google Gemini 2.5 Flash</li><li><strong>Cloud Infrastructure:</strong> Google Cloud Platform (OAuth 2.0 Web Flow)</li><li><strong>Integrations:</strong> Gmail API, Google Calendar API</li></ul><p>I architected, built, and deployed this entire system from the ground up in <strong>2 Weeks</strong>.</p></div><div class="glass-card"><div class="card-title">Connect With Me</div><div class="footer-links"><a href="https://in.bold.pro/my/v-sreekirthana" target="_blank">Bold.pro</a><a href="https://www.linkedin.com/in/v-sree-kirthana-565b4a367?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a><a href="https://github.com/sreekirthana123/sreekirthana123" target="_blank">GitHub</a><br><br><a href="https://sree-kirthana-studypilot.streamlit.app/" target="_blank" style="color: #ff80ab; font-weight: 800;">🚀 View my recent AI Agent StudyPilot</a><br><br><a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/PRIVACY.md" target="_blank" style="font-size:1.1em; font-weight:normal;">Privacy Policy</a><a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/TERMS.md" target="_blank" style="font-size:1.1em; font-weight:normal;">Terms & Conditions</a></div><p class="disclaimer">Note: This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.</p></div></div>
-""",
+        f"""
+        <div class="hero-section">
+            <h1 class="hero-title">Chief of Staff AI</h1>
+            <p class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</p>
+            <a href="{auth_url}" target="_self" class="google-btn">
+                 Sign in with Google
+            </a>
+        </div>
+        """, 
         unsafe_allow_html=True
     )
+
+    # WHAT THIS IS SECTION
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown('<div class="card-title">What This Is</div>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent, Needs Reply, FYI, and Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of routing, sorting, and drafting.</p>
+        <p>Want to skip the manual steps? Hit the <em>Run Full Pipeline</em> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # INSIDE THE ENGINE SECTION
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown('<div class="card-title">Inside the Engine: The Four Phases</div>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p>The application operates on a strict, transparent four-stage pipeline:</p>
+        <ul>
+            <li><strong>Phase 1: Inbox & Triage</strong> — The agent pulls your latest unread emails and evaluates their context, content, and urgency footprint, assigning them straight to their priority matrix.</li>
+            <li><strong>Phase 2: Draft Generation</strong> — For emails flagged as Urgent or Needs Reply, the business logic generates contextual, highly tailored markdown response drafts.</li>
+            <li><strong>Phase 3: Approval Gate (Human-In-The-Loop)</strong> — Crucial Guardrails. No automation context is sent back without your thumbs up. Review, tweak, and instantly track the text vectors before hitting dispatch.</li>
+            <li><strong>Phase 4: Dispatch Pipeline</strong> — Once you approve, the system dispatches the drafts securely back to the thread, clearing out clutter and moving you straight to Inbox Zero.</li>
+        </ul>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    # WHO I AM SECTION MOVED TO THE BOTTOM
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.markdown('<div class="card-title">Who I Am</div>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p>I'm Sree Kirthana, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AI/ML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
+        <p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CozSclt, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskli GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('</div>', unsafe_allow_html=True) # End landing-wrapper
