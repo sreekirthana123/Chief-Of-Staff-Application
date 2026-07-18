@@ -2,15 +2,15 @@ import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
     # --- CSS Injection ---
-   st.markdown(
+  st.markdown(
     """
     <style>
       /* Increase font-size for ALL body texts AND lists */
       p,
       .markdown-text,
       .element-container > div,
-       ul li,  /* Unordered lists (dark dots) */
-       ol li {  /* Ordered lists (numbered bullets) */ 
+      ul li,  /* Unordered lists */
+       ol li {  /* Ordered lists */ 
           font-size: 18px !important;
        }
         /* The Aurora Background */
