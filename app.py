@@ -17,9 +17,6 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlparse
-# Ensure this is at the bottom of app.py
-from ui import render_aurora_landing_page
-render_aurora_landing_page(auth_url)
 
 import streamlit as st
 from google.oauth2.credentials import Credentials
