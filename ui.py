@@ -3,9 +3,6 @@ import streamlit as st
 def render_aurora_landing_page(auth_url: str) -> None:
     # --- CSS Injection ---
     st.markdown(
-        """
-        <style>
-        st.markdown(
     """
     <style>
     p {
