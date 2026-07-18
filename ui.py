@@ -1,29 +1,70 @@
 import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
-    # --- CSS Injection ---
     st.markdown("""
         <style>
-        .landing-wrapper { width: 100%; max-width: 100%; margin: 0 auto; padding: 40px 2%; }
-        .glass-card { background: rgba(10, 15, 30, 0.55); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 5rem; margin-bottom: 4rem; width: 100%; }
+        .stApp {
+            background: linear-gradient(160deg, #020b26 0%, #0056b3 35%, #99ddff 70%, #ff80ab 100%) !important;
+            background-attachment: fixed !important;
+            color: #FAFAFA;
+            font-family: 'Inter', sans-serif;
+        }
+        .landing-wrapper { width: 100%; max-width: 100%; padding: 40px 2%; }
+        .glass-card { background: rgba(10, 15, 30, 0.55); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 4rem; margin-bottom: 4rem; width: 100%; }
         .card-title { font-size: 3.5rem; font-weight: 800; color: #90e0ef; border-bottom: 2px solid rgba(255,255,255,0.15); padding-bottom: 1rem; margin-bottom: 2rem; }
-        p { font-size: 2.2rem !important; line-height: 1.9; color: #ffffff; }
+        p, li { font-size: 2.2rem !important; line-height: 1.8; color: #ffffff; margin-bottom: 1.5rem; }
         .hero-section { text-align: center; margin-bottom: 6rem; }
-        .google-btn { display: inline-block; padding: 25px 60px; background: rgba(255, 255, 255, 0.15); color: white; border-radius: 15px; font-size: 2.2rem; text-decoration: none; }
+        .hero-title { font-size: 7rem; font-weight: 900; color: white; margin-bottom: 1rem; }
+        .hero-subtitle { font-size: 2.8rem; color: #cbd5e1; margin-bottom: 3rem; }
+        .google-btn { display: inline-block; padding: 25px 60px; background: rgba(255, 255, 255, 0.15); color: white; border-radius: 15px; font-size: 2.2rem; text-decoration: none; font-weight: bold; }
+        .footer-links a { color: #a5b4fc; font-size: 1.8rem; margin-right: 2rem; }
         </style>
     """, unsafe_allow_html=True)
 
-    # --- HTML Structure ---
     st.markdown(f"""
         <div class="landing-wrapper">
             <div class="hero-section">
-                <h1>Chief of Staff AI</h1>
-                <p>Intelligent Triage & Autonomous Scheduling for your Inbox.</p>
+                <div class="hero-title">Chief of Staff AI</div>
+                <div class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</div>
                 <a href="{auth_url}" target="_top" class="google-btn">🔑 Sign in with Google</a>
             </div>
+            
             <div class="glass-card">
                 <div class="card-title">Who I Am</div>
-                <p>I'm <strong>V Sree Kirthana</strong>, an AI specialist...</p>
+                <p>I'm <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
+                <p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-title">What This Is</div>
+                <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent</strong>, <strong>Needs Reply</strong>, <strong>FYI</strong>, and <strong>Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-title">Inside the Engine: The Four Phases</div>
+                <ul>
+                    <li><strong>Phase 1: Inbox & Triage:</strong> The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message.</li>
+                    <li><strong>Phase 2: Draft Generation:</strong> For any email flagged as <em>Urgent</em> or <em>Needs Reply</em>, the AI instantly generates a highly contextual, professional draft response.</li>
+                    <li><strong>Phase 3: Approval Gate:</strong> You are in the driver's seat with three options: Regenerate, Edit, or Approve.</li>
+                    <li><strong>Phase 4: Export Proof:</strong> A complete audit trail of the AI's work available as Markdown or HTML.</li>
+                </ul>
+            </div>
+            
+            <div class="glass-card">
+                <div class="card-title">Connect With Me</div>
+                <div class="footer-links">
+                    <a href="https://in.bold.pro/my/v-sreekirthana" target="_blank">Bold.pro</a>
+                    <a href="https://www.linkedin.com/in/v-sree-kirthana-565b4a367" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sreekirthana123/sreekirthana123" target="_blank">GitHub</a>
+                    <br><br>
+                    <a href="https://sree-kirthana-studypilot.streamlit.app/" target="_blank" style="color: #ff80ab; font-weight: 800;">🚀 View my recent AI Agent StudyPilot</a>
+                    <br><br>
+                    <a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/PRIVACY.md" target="_blank">Privacy Policy</a>
+                    <a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/TERMS.md" target="_blank">Terms & Conditions</a>
+                </div>
             </div>
         </div>
     """, unsafe_allow_html=True)
+    ```
+
+Commit this to GitHub, do a **Hard Refresh** (`Ctrl + Shift + R`) on your app, and everything will be exactly as you wanted!
