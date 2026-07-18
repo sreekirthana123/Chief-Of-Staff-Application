@@ -41,135 +41,80 @@ def render_aurora_landing_page(auth_url: str) -> None:
             position: relative;
             z-index: 1;
             width: 100%; 
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 2%;
             box-sizing: border-box;
         }
 
-        /* PREMIUM WHITE GLASS CARD (TRUE GLASSMORPHISM) */
+        /* DARKER GLASS CARD FOR CONTRAST */
         .glass-card {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 24px;
-            padding: 3.5rem; 
-            margin-bottom: 3.5rem;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(10, 15, 30, 0.55);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 5rem; 
+            margin-bottom: 4rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
             width: 100%;
-            box-sizing: border-box;
         }
 
         .glass-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+            transform: translateY(-5px);
         }
 
-        /* FOUR PILLARS MINI CARDS */
-        .pillar-card {
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 16px;
-            padding: 1.5rem;
-            text-align: center;
-            margin: 10px 0;
-        }
-        .pillar-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-top: 0.5rem;
-            color: #ffffff;
-        }
-
-        /* TYPOGRAPHY HIERARCHY */
+        /* EVEN BIGGER HEADINGS */
         .card-title {
-            font-size: 2.5rem; 
+            font-size: 3.5rem; 
             font-weight: 800;
-            margin-bottom: 1.8rem;
-            color: #ffffff; 
-            border-bottom: 2px solid rgba(255,255,255,0.2);
-            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+            color: #90e0ef; 
+            border-bottom: 2px solid rgba(255,255,255,0.15);
+            padding-bottom: 1rem;
         }
 
         .hero-section {
             text-align: center;
-            margin-bottom: 5rem;
-            margin-top: 4rem;
+            margin-bottom: 6rem;
+            margin-top: 3rem;
         }
         .hero-title {
-            font-size: clamp(3.5rem, 7vw, 5.5rem); 
+            font-size: clamp(5rem, 10vw, 8rem); 
             font-weight: 900;
             background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1.5rem;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
         .hero-subtitle {
-            font-size: 1.75rem; 
-            color: #e2e8f0;
-            margin-bottom: 3.5rem;
-            font-weight: 400;
+            font-size: 2.8rem; 
+            color: #cbd5e1;
+            margin-bottom: 4rem;
         }
 
-        /* HIGHLY VISIBLE BODY TEXT */
+        /* EXTRA LARGE BODY TEXT */
         p, li {
-            line-height: 1.75;
-            color: #f8fafc; 
-            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #ffffff; 
+            font-size: 2rem; /* Scaled up text to be highly visible */
         }
         ul {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
+            margin-left: 3.5rem;
+            margin-bottom: 2rem;
         }
-        li { margin-bottom: 1rem; }
-        strong { color: #ffffff; font-weight: 700; }
+        li { margin-bottom: 1.5rem; }
+        strong { color: #90e0ef; font-weight: 700; }
 
-        /* INTUITIVE TAGS FOR INFO BLOCKS */
-        .tech-pill {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin: 5px;
-            color: #ffffff;
-        }
-
-        /* HIGH VISIBILITY CTAS */
-        .google-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 42px;
-            background: #ffffff;
-            color: #020b26 !important;
-            border: none;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.3rem; 
-            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .google-btn:hover {
-            background: #f1f5f9;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(255, 255, 255, 0.4);
-        }
-
+        /* BIGGER LINKS */
         .footer-links a {
-            color: #cbd5e1;
+            color: #a5b4fc;
             text-decoration: none;
-            margin-right: 2rem;
+            margin-right: 2.5rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.8rem;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
@@ -177,80 +122,46 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: underline;
         }
         .disclaimer {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            margin-top: 3.5rem;
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            margin-top: 4rem;
             font-style: italic;
-            border-top: 1px solid rgba(255,255,255,0.15);
-            padding-top: 1.2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+        }
+
+        /* MASSIVE BUTTON */
+        .google-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 60px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2.2rem; 
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .google-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid #ffffff; 
+            transform: translateY(-5px);
+            color: white;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
 
-    # --- Structural Layout Layout ---
-    st.markdown('<div class="landing-wrapper">', unsafe_allow_html=True)
-
-    # 1. HERO SECTION (CHIEF OF STAFF COMES FIRST)
+    # --- HTML Structure ---
     st.markdown(
-        f"""
-        <div class="hero-section">
-            <h1 class="hero-title">Chief of Staff AI</h1>
-            <p class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</p>
-            <a href="{auth_url}" target="_self" class="google-btn">
-                 Sign in with Google
-            </a>
-        </div>
-        """, 
+f"""
+<div class="landing-wrapper"><div class="glass-card"><div class="card-title">Who I Am</div><p>I'm <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p><p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p></div><div class="hero-section"><div class="hero-title">Chief of Staff AI</div><div class="hero-subtitle">Intelligent Triage & Autonomous Scheduling for your Inbox.</div><a href="{auth_url}" target="_top" class="google-btn">🔑 Sign in with Google</a></div><div class="glass-card"><div class="card-title">What This Is</div><p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent</strong>, <strong>Needs Reply</strong>, <strong>FYI</strong>, and <strong>Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p><p>Want to skip the manual steps? Hit the <strong>Run Full Pipeline</strong> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p></div><div class="glass-card"><div class="card-title">Inside the Engine: The Four Phases</div><p>This application operates on a strict, transparent four-step pipeline:</p><ul><li><strong>Phase 1: Inbox & Triage</strong><br>The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message, assigning a strict priority level to each one.</li><li><strong>Phase 2: Draft Generation</strong><br>For any email flagged as <em>Urgent</em> or <em>Needs Reply</em>, the AI instantly generates a highly contextual, professional draft response.</li><li><strong>Phase 3: Approval Gate (Human-in-the-Loop)</strong><br><strong>Total Control.</strong> The AI generates the responses, but it never sends an email without your explicit permission. You are in the driver's seat with three options for every draft:<ul><li><strong>Regenerate:</strong> Don't like the AI's first attempt? Click this to generate a brand new response.</li><li><strong>Edit:</strong> Jump in and manually tweak the text exactly how you want it.</li><li><strong>Approve:</strong> Once the draft is perfect, approve it.</li></ul>Only after you hit Approve will the <strong>Send</strong> button appear, allowing you to dispatch the email directly from the app. Mistakes do not make it to your outbox.</li><li><strong>Phase 4: Export Proof</strong><br>A complete audit trail of the AI's work. Once your triage is complete, you can download a full Proof of Work report as a cleanly formatted <strong>Markdown</strong> or <strong>HTML file</strong>.</li></ul></div><div class="glass-card"><div class="card-title">Smart Calendar Scheduling</div><p>More than just an email drafter, this agent understands time. If an incoming email asks for a meeting or proposes a time, the AI parses the request, checks your availability, and finds a free slot. Upon your approval, it automatically schedules the event and bookmarks it directly onto your <strong>Google Calendar</strong>.</p></div><div class="glass-card"><div class="card-title">Architecture & Timeline</div><p>This agent is powered by a robust, modern tech stack designed for speed and security:</p><ul><li><strong>Core Logic:</strong> Python</li><li><strong>Frontend UI:</strong> Streamlit (Custom Aurora Glassmorphism)</li><li><strong>AI Engine:</strong> Google Gemini 2.5 Flash</li><li><strong>Cloud Infrastructure:</strong> Google Cloud Platform (OAuth 2.0 Web Flow)</li><li><strong>Integrations:</strong> Gmail API, Google Calendar API</li></ul><p>I architected, built, and deployed this entire system from the ground up in <strong>2 Weeks</strong>.</p></div><div class="glass-card"><div class="card-title">Connect With Me</div><div class="footer-links"><a href="https://in.bold.pro/my/v-sreekirthana" target="_blank">Bold.pro</a><a href="https://www.linkedin.com/in/v-sree-kirthana-565b4a367?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">LinkedIn</a><a href="https://github.com/sreekirthana123/sreekirthana123" target="_blank">GitHub</a><br><br><a href="https://sree-kirthana-studypilot.streamlit.app/" target="_blank" style="color: #ff80ab; font-weight: 800;">🚀 View my recent AI Agent StudyPilot</a><br><br><a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/PRIVACY.md" target="_blank" style="font-size:1.1em; font-weight:normal;">Privacy Policy</a><a href="https://github.com/sreekirthana123/Chief-Of-Staff-Application/blob/master/TERMS.md" target="_blank" style="font-size:1.1em; font-weight:normal;">Terms & Conditions</a></div><p class="disclaimer">Note: This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.</p></div></div>
+""",
         unsafe_allow_html=True
     )
-
-    # 2. WHAT THIS IS SECTION
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">What This Is</div>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. 
-        It connects securely to your Google account and automatically classifies your incoming emails into four specialized buckets. 
-        You only give your energy to what actually matters, while the AI handles the heavy lifting of routing, sorting, and drafting.</p>
-        <p style="margin-top: 1.5rem; margin-bottom: 2rem;">Want to skip the manual steps? Hit the <em>Run Full Pipeline</em> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
-        """,
-        unsafe_allow_html=True
-    )
-    
-    # 4-Pillars Visual Cards Grid Injection
-    col1, col2, col3, col4 = st.columns(4)
-    with col1:
-        st.markdown('<div class="pillar-card">🚨<div class="pillar-title">Urgent</div></div>', unsafe_allow_html=True)
-    with col2:
-        st.markdown('<div class="pillar-card">💬<div class="pillar-title">Needs Reply</div></div>', unsafe_allow_html=True)
-    with col3:
-        st.markdown('<div class="pillar-card">📌<div class="pillar-title">FYI</div></div>', unsafe_allow_html=True)
-    with col4:
-        st.markdown('<div class="pillar-card">🗑️<div class="pillar-title">Ignore</div></div>', unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # 3. INSIDE THE ENGINE SECTION
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">Inside the Engine: The Four Phases</div>', unsafe_allow_html=True)
-    st.markdown(
-        """
-        <p>The application operates on a strict, transparent four-stage pipeline:</p>
-        <ul>
-            <li><strong>Phase 1: Inbox & Triage</strong> — The agent pulls your latest unread emails and evaluates their context, content, and urgency footprint, assigning them straight to their priority matrix.</li>
-            <li><strong>Phase 2: Draft Generation</strong> — For emails flagged as Urgent or Needs Reply, the business logic generates contextual, highly tailored markdown response drafts.</li>
-            <li><strong>Phase 3: Approval Gate (Human-In-The-Loop)</strong> — Crucial Guardrails. No automation context is sent back without your thumbs up. Review, tweak, and instantly track the text vectors before hitting dispatch.</li>
-            <li><strong>Phase 4: Dispatch Pipeline</strong> — Once you approve, the system dispatches the drafts securely back to the thread, clearing out clutter and moving you straight to Inbox Zero.</li>
-        </ul>
-        """,
-        unsafe_allow_html=True
-    )
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # 4. WHO I AM SECTION (MOVED TO BOTTOM)
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">Who I Am</div>', unsafe_allow_html=True)
-    st.markdown(
-        """
-    I'm Sree Kirthana, an AI specialist, full-stack developer, and automation engineer. My core focus is bridging the gap between raw datasets and production-ready machine learning architectures.I engineer automated, self-sustaining AI workflows and the infrastructure required to support them. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.""",unsafe_allow_html=True)# Modern Skills Accent Pillsst.markdown("""PythonAI / MLLLM OpsStreamlitFull-Stack Automation""",unsafe_allow_html=True)st.markdown('', unsafe_allow_html=True)st.markdown('', unsafe_allow_html=True) # End landing-wrapper
