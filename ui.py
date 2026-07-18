@@ -2,22 +2,13 @@ import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
     # --- CSS Injection ---
-  st.markdown(
-    """
-    <style>
-      /* Aggressive font-size override for ALL visible text in Streamlit */
-      body,
-       .main .block-container,
-       .markdown-text,
-        p, li {  /* Lists too */ 
-          font-size: 18px !important;
-           color::white!
-       }
-       
+    st.markdown(
+        """
+        <style>
         /* The Aurora Background */
         .stApp {
             background: 
-                radial-gradient(circle at 25% 100%, rgba(236, 72, 153, 0.65) 0%, transparent 65%),
+                radial-gradient(circle at 15% 100%, rgba(236, 72, 153, 0.65) 0%, transparent 65%),
                 radial-gradient(circle at 85% 100%, rgba(168, 85, 247, 0.45) 0%, transparent 50%),
                 radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.55) 0%, transparent 60%),
                 linear-gradient(180deg, #020617 0%, #0f172a 35%, #1e3a8a 70%, #174276 100%) !important;
@@ -41,7 +32,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
                 radial-gradient(2px 2px at 50px 160px, rgba(255,255,255,0.8), rgba(0,0,0,0));
             background-repeat: repeat;
             background-size: 200px 200px;
-            opacity: 0.8;
+            opacity: 0.6;
             z-index: 0;
             pointer-events: none;
             animation: fall 20s linear infinite;
@@ -76,9 +67,9 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         /* CLEAN HOVER (No rainbow, just a soft lift) */
         .glass-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4); 
-            border: 1px solid rgba(355, 355, 355, 0.35);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
 
         /* MASSIVE HEADINGS */
@@ -106,7 +97,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             line-height: 1.2;
         }
         .hero-subtitle {
-            font-size: 4.4rem; /* Huge subtitle */
+            font-size: 1.4rem; /* Huge subtitle */
             color: #cbd5e1;
             margin-bottom: 3.5rem;
         }
@@ -115,7 +106,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         p, li {
             line-height: 1.65;
             color: #e2e8f0;
-            font-size: 10.3rem; 
+            font-size: 1.3rem; 
         }
         ul {
             margin-left: 2.2rem;
@@ -130,7 +121,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: none;
             margin-right: 2rem;
             font-weight: 600;
-            font-size: 2.35rem;
+            font-size: 1.35rem;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
@@ -138,9 +129,9 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: underline;
         }
         .disclaimer {
-            font-size: 3.15rem;
+            font-size: 1.15rem;
             color: #94a3b8;
-            margin-top: 4.5rem;
+            margin-top: 3.5rem;
             font-style: italic;
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 1.5rem;
@@ -158,7 +149,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 4.6rem; 
+            font-size: 1.6rem; 
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
