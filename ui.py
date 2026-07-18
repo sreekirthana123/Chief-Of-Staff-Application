@@ -141,7 +141,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             color: #94a3b8;
             margin-top: 3.5rem;
             font-style: italic;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(355,355,355,0.2);
             padding-top: 1.5rem;
         }
 
