@@ -174,7 +174,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """, 
         unsafe_allow_html=True
     )
- # 6. WHO I AM SECTION (MOVED TO BOTTOM)
+ # 2. WHO I AM SECTION (MOVED TO BOTTOM)
     st.markdown(
         """
         <div class="glass-card">
@@ -190,7 +190,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """,
         unsafe_allow_html=True
     )
-    # 2. WHAT THIS IS SECTION
+    # 3. WHAT THIS IS SECTION
     st.markdown(
         """
         <div class="glass-card">
@@ -202,7 +202,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         unsafe_allow_html=True
     )
 
-    # 3. INSIDE THE ENGINE SECTION
+    # 4. INSIDE THE ENGINE SECTION
     st.markdown(
         """
         <div class="glass-card">
@@ -227,7 +227,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """,
         unsafe_allow_html=True
     )
-    # 4. THE TOOLS I USED SECTION
+    # 5. THE TOOLS I USED SECTION
     st.markdown(
         """
         <div class="glass-card">
@@ -244,7 +244,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """,
         unsafe_allow_html=True
     )
-        # 5. BUILD TIMELINE SECTION
+        # 6. BUILD TIMELINE SECTION
     st.markdown(
         """
         <div class="glass-card">
@@ -254,7 +254,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         """,
         unsafe_allow_html=True
     )
-    # 7. LEGAL FOOTER AND DISCLAIMER
+    # 8. LEGAL FOOTER AND DISCLAIMER
     st.markdown(
         """
         <div class="glass-card">
