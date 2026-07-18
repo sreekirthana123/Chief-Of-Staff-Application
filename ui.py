@@ -5,14 +5,18 @@ def render_aurora_landing_page(auth_url: str) -> None:
   st.markdown(
     """
     <style>
-      /* Increase font-size for ALL body texts AND lists */
-      p,
-      .markdown-text,
-      .element-container > div,
-      ul li,  /* Unordered lists */
-       ol li {  /* Ordered lists */ 
+      /* Aggressive font-size override for ALL visible text in Streamlit */
+      body,
+       .main .block-container,
+       .markdown-text,
+        p, li {  /* Lists too */ 
           font-size: 18px !important;
+           color::white!
        }
+     </style>
+    """,
+     unsafe_allow_html=True)
+
         /* The Aurora Background */
         .stApp {
             background: 
