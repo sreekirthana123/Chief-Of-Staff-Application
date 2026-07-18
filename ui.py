@@ -1,8 +1,6 @@
 import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
-    """Renders the Aurora Glassmorphism landing page UI."""
-    
     # --- CSS Injection ---
     st.markdown(
         """
@@ -36,66 +34,56 @@ def render_aurora_landing_page(auth_url: str) -> None:
 
         #MainMenu, header, footer {visibility: hidden;}
 
-        /* 1. BIGGER BLOCKS: Expanded to 1100px width */
+        /* FULL WIDTH BLOCKS: Spans the entire screen */
         .landing-wrapper {
             position: relative;
             z-index: 1;
-            max-width: 1100px; 
+            width: 100%; 
+            max-width: 100%;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 2%; /* Uses percentage to hug the edges */
+            box-sizing: border-box;
         }
 
-        /* The Glass Card */
+        /* The Glass Card - Simple, no rainbow */
         .glass-card {
-            background: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)) padding-box,
-                        linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)) border-box;
+            background: rgba(255, 255, 255, 0.06);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 3px solid transparent;
-            border-radius: 24px;
-            padding: 3.5rem; 
-            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 4.5rem; /* Huge padding inside */
+            margin-bottom: 3.5rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
-            background-size: 100% 100%, 100% 100%;
+            transition: all 0.3s ease;
+            width: 100%;
         }
 
-        /* 2. "AI MODE" SOFT PASTEL HOVER EFFECT */
+        /* CLEAN HOVER (No rainbow, just a soft lift) */
         .glass-card:hover {
             transform: translateY(-5px);
-            /* Adds a soft glowing halo behind the card */
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3), 0 0 25px rgba(197, 138, 249, 0.3); 
-            /* Google AI Colors: Soft Blue, Purple, Pink, Yellow, Green */
-            background: linear-gradient(rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09)) padding-box,
-                        linear-gradient(90deg, #8ab4f8, #c58af9, #f28b82, #fde293, #81c995, #8ab4f8) border-box;
-            background-size: 100% 100%, 200% 100%;
-            animation: aiBorder 3s linear infinite;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); 
+            border: 1px solid rgba(255, 255, 255, 0.25);
         }
 
-        @keyframes aiBorder {
-            0% { background-position: 0% 0%, 0% 0%; }
-            100% { background-position: 0% 0%, 200% 0%; }
-        }
-
-        /* 3. HEADINGS IN A DIFFERENT COLOR AND BIGGER */
+        /* MASSIVE HEADINGS */
         .card-title {
-            font-size: 2.2rem; 
+            font-size: 2.8rem; 
             font-weight: 800;
-            margin-bottom: 1.2rem;
-            color: #8ab4f8; /* Soft blue to match the AI vibe */
+            margin-bottom: 1.5rem;
+            color: #9B72CB; 
             border-bottom: 1px solid rgba(255,255,255,0.15);
-            padding-bottom: 0.75rem;
+            padding-bottom: 1rem;
         }
 
-        /* 4. BIGGER FONT SIZES */
         .hero-section {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             margin-top: 2rem;
         }
         .hero-title {
-            font-size: clamp(3rem, 6vw, 5rem); 
-            font-weight: 800;
+            font-size: clamp(4rem, 8vw, 7rem); /* Huge main title */
+            font-weight: 900;
             background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -103,29 +91,31 @@ def render_aurora_landing_page(auth_url: str) -> None:
             line-height: 1.2;
         }
         .hero-subtitle {
-            font-size: 1.6rem; 
+            font-size: 2.2rem; /* Huge subtitle */
             color: #cbd5e1;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem;
         }
 
+        /* MASSIVE BODY TEXT */
         p, li {
-            line-height: 1.7;
+            line-height: 1.8;
             color: #e2e8f0;
-            font-size: 1.2rem; 
+            font-size: 1.45rem; 
         }
         ul {
-            margin-left: 1.8rem;
-            margin-bottom: 1.2rem;
+            margin-left: 2.2rem;
+            margin-bottom: 1.5rem;
         }
-        li { margin-bottom: 0.85rem; }
+        li { margin-bottom: 1.2rem; }
         strong { color: #ffffff; font-weight: 600; }
 
+        /* BIGGER LINKS */
         .footer-links a {
             color: #a5b4fc;
             text-decoration: none;
-            margin-right: 1.5rem;
+            margin-right: 2rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.35rem;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
@@ -133,37 +123,39 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: underline;
         }
         .disclaimer {
-            font-size: 0.95rem;
+            font-size: 1.15rem;
             color: #94a3b8;
-            margin-top: 2.5rem;
+            margin-top: 3.5rem;
             font-style: italic;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 1.2rem;
+            padding-top: 1.5rem;
         }
 
+        /* MASSIVE BUTTON */
         .google-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 36px;
+            padding: 20px 45px;
             background: rgba(255, 255, 255, 0.12);
             color: white;
             border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.3rem; 
+            font-size: 1.6rem; 
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             cursor: pointer;
             pointer-events: auto;
         }
+        
         .google-btn:hover {
             background: rgba(255, 255, 255, 0.25);
-            border: 2px solid #8ab4f8; 
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(138, 180, 248, 0.4); 
+            border: 2px solid #ffffff; 
+            transform: translateY(-4px);
+            box-shadow: 0 10px 35px rgba(255, 255, 255, 0.2); 
             color: white;
         }
         </style>
