@@ -2,27 +2,17 @@ import streamlit as st
 
 def render_aurora_landing_page(auth_url: str) -> None:
     # --- CSS Injection ---
-    st.markdown(
+   st.markdown(
     """
     <style>
-      /* Increase font-size for ALL body texts AND lists (already done) */
+      /* Increase font-size for ALL body texts AND lists */
       p,
       .markdown-text,
-       ul li,
-       ol li {
+      .element-container > div,
+       ul li,  /* Unordered lists (dark dots) */
+       ol li {  /* Ordered lists (numbered bullets) */ 
           font-size: 18px !important;
        }
-
-        /* New styles for Privacy Policy, Terms & Conditions, Note section */ 
-
-        h3 { /* assuming they're under headings like 'Privacy Policy' etc.*/
-            color: white;
-            font-size::%!%
-         }
-
-         .section-gray {  /* if your notes are wrapped in a class 'section-gray'*/ }
-             color::white!
-              margin-top::20px!
         /* The Aurora Background */
         .stApp {
             background: 
