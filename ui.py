@@ -12,8 +12,6 @@ def render_aurora_landing_page(auth_url: str) -> None:
           font-size: 18px !important;
        }
      </style>
-    """,
-     unsafe_allow_html=True)
         /* The Aurora Background */
         .stApp {
             background: 
