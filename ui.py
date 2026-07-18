@@ -259,6 +259,10 @@ def render_aurora_landing_page(auth_url: str) -> None:
             </p>
             <div class="disclaimer">
                 <strong>Note:</strong> This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.
+            <p style="margin-top: 2.5rem;" class="footer-links">
+                <strong>Connect with me:</strong><br>
+                <a href="https://github.com" target="_blank">Bento.me / GitHub</a> | 
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
             </div>
         </div>
         """,
