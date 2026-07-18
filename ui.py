@@ -97,7 +97,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             line-height: 1.2;
         }
         .hero-subtitle {
-            font-size: 1.4rem; /* Huge subtitle */
+            font-size: 3.4rem; /* Huge subtitle */
             color: #cbd5e1;
             margin-bottom: 3.5rem;
         }
@@ -106,7 +106,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         p, li {
             line-height: 1.65;
             color: #e2e8f0;
-            font-size: 6.3rem; 
+            font-size: 10.3rem; 
         }
         ul {
             margin-left: 2.2rem;
@@ -121,7 +121,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: none;
             margin-right: 2rem;
             font-weight: 600;
-            font-size: 1.35rem;
+            font-size: 4.35rem;
             transition: color 0.2s ease;
         }
         .footer-links a:hover {
@@ -129,7 +129,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             text-decoration: underline;
         }
         .disclaimer {
-            font-size: 1.15rem;
+            font-size: 4.15rem;
             color: #94a3b8;
             margin-top: 3.5rem;
             font-style: italic;
