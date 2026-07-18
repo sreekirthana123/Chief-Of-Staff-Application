@@ -181,7 +181,6 @@ def render_aurora_landing_page(auth_url: str) -> None:
             <div class="card-title">Who I Am</div>
             <p>I’m <strong>V Sree Kirthana</strong>, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
             <p style="margin-top: 1.5rem;">I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at <strong>CodSoft</strong>, alongside building robust web frameworks during my Full-Stack Development stint at <strong>Cognifyz Technologies</strong>. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the <strong>Outskill GenAI Mastermind Program</strong>. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p>
-            
             <p style="margin-top: 2.5rem;" class="footer-links">
                 <strong>Connect with me:</strong><br>
                 <a href="https://github.com" target="_blank">Bento.me / GitHub</a> | 
