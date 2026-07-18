@@ -158,10 +158,10 @@ def render_aurora_landing_page(auth_url: str) -> None:
         unsafe_allow_html=True
     )
 
-    # --- Structural Layout Layout ---
+    # --- Structural Layout ---
     st.markdown('<div class="landing-wrapper">', unsafe_allow_html=True)
 
-    # CHANGE 1: HERO SECTION MOVED TO THE ABSOLUTE TOP
+    # 1. HERO SECTION (CHIEF OF STAFF AT TOP)
     st.markdown(
         f"""
         <div class="hero-section">
@@ -175,45 +175,63 @@ def render_aurora_landing_page(auth_url: str) -> None:
         unsafe_allow_html=True
     )
 
-    # WHAT THIS IS SECTION
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">What This Is</div>', unsafe_allow_html=True)
+    # 2. WHAT THIS IS SECTION
     st.markdown(
         """
-        <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent, Needs Reply, FYI, and Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of routing, sorting, and drafting.</p>
-        <p>Want to skip the manual steps? Hit the <em>Run Full Pipeline</em> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
+        <div class="glass-card">
+            <div class="card-title">What This Is</div>
+            <p>Meet your new fully functional AI agent. <strong>Chief of Staff AI</strong> acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: <strong>Urgent, Needs Reply, FYI, and Ignore</strong>. You only give your energy to what actually matters, while the AI handles the heavy lifting of reading, sorting, and drafting.</p>
+            <p style="margin-top: 1.5rem;">Want to skip the manual steps? Hit the <em>Run Full Pipeline</em> button to instantly fetch your emails, triage them, generate all necessary drafts, and jump straight to the Approval Gate.</p>
+        </div>
         """,
         unsafe_allow_html=True
     )
-    st.markdown('</div>', unsafe_allow_html=True)
 
-    # INSIDE THE ENGINE SECTION
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">Inside the Engine: The Four Phases</div>', unsafe_allow_html=True)
+    # 3. INSIDE THE ENGINE SECTION
     st.markdown(
         """
-        <p>The application operates on a strict, transparent four-stage pipeline:</p>
-        <ul>
-            <li><strong>Phase 1: Inbox & Triage</strong> — The agent pulls your latest unread emails and evaluates their context, content, and urgency footprint, assigning them straight to their priority matrix.</li>
-            <li><strong>Phase 2: Draft Generation</strong> — For emails flagged as Urgent or Needs Reply, the business logic generates contextual, highly tailored markdown response drafts.</li>
-            <li><strong>Phase 3: Approval Gate (Human-In-The-Loop)</strong> — Crucial Guardrails. No automation context is sent back without your thumbs up. Review, tweak, and instantly track the text vectors before hitting dispatch.</li>
-            <li><strong>Phase 4: Dispatch Pipeline</strong> — Once you approve, the system dispatches the drafts securely back to the thread, clearing out clutter and moving you straight to Inbox Zero.</li>
-        </ul>
+        <div class="glass-card">
+            <div class="card-title">Inside the Engine: The Four Phases</div>
+            <p>This application operates on a strict, transparent four-step pipeline:</p>
+            <ul>
+                <li><strong>Phase 1: Inbox & Triage</strong> — The agent pulls your live email threads and uses AI to analyze the context, intent, and urgency of every message, assigning a strict priority level to each one.</li>
+                <li><strong>Phase 2: Draft Generation</strong> — For any email flagged as Urgent or Needs Reply, the AI instantly generates a highly contextual, professional draft response.</li>
+                <li><strong>Phase 3: Approval Gate (Human-in-the-Loop)</strong> — Total Control. The AI generates the responses, but it never sends an email without your explicit permission. You are in the driver's seat with three options for every draft:
+                    <ul>
+                        <li><strong>Regenerate:</strong> Don't like the AI's first attempt? Click this to generate a brand new response.</li>
+                        <li><strong>Edit:</strong> Jump in and manually tweak the text exactly how you want it.</li>
+                        <li><strong>Approve:</strong> Once the draft is perfect, approve it.</li>
+                    </ul>
+                    Only after you hit Approve will the Send button appear, allowing you to dispatch the email directly from the app. Mistakes do not make it to your outbox.
+                </li>
+                <li><strong>Phase 4: Export Proof</strong> — A complete audit trail of the AI's work. Once your triage is complete, you can download a full Proof of Work report as a cleanly formatted Markdown or HTML file.</li>
+            </ul>
+            <p style="margin-top: 2rem;"><strong>Smart Calendar Scheduling</strong><br>
+            More than just an email drafter, this agent understands time. If an incoming email asks for a meeting or proposes a time, the AI parses the request, checks your availability, and finds a free slot. Upon your approval, it automatically schedules the event and bookmarks it directly onto your Google Calendar.</p>
+        </div>
         """,
         unsafe_allow_html=True
     )
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # WHO I AM SECTION MOVED TO THE BOTTOM
-    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
-    st.markdown('<div class="card-title">Who I Am</div>', unsafe_allow_html=True)
+    # 4. THE TOOLS I USED SECTION
     st.markdown(
         """
-        <p>I'm Sree Kirthana, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AI/ML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.</p>
-        <p>I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CozSclt, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskli GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.</p>
+        <div class="glass-card">
+            <div class="card-title">The Tools I Used</div>
+            <p>This agent is powered by a robust, modern tech stack designed for speed and security:</p>
+            <ul>
+                <li><strong>Core Logic:</strong> Python</li>
+                <li><strong>Frontend UI:</strong> Streamlit (Custom Aurora Glassmorphism)</li>
+                <li><strong>AI Engine:</strong> Google Gemini 2.5 Flash</li>
+                <li><strong>Cloud Infrastructure:</strong> Google Cloud Platform (OAuth 2.0 Web Flow)</li>
+                <li><strong>Integrations:</strong> Gmail API, Google Calendar API</li>
+            </ul>
+        </div>
         """,
         unsafe_allow_html=True
     )
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    st.markdown('</div>', unsafe_allow_html=True) # End landing-wrapper
+    # 5. BUILD TIMELINE SECTION
+    st.markdown(
+        """
+        <div class="glass-card">
+            <div class="card-title">The Build Timeline</div>
+I architected, built, and deployed this entire system from the ground up in [Insert Time - e.g., 2 Weeks].""",unsafe_allow_html=True)# 6. WHO I AM SECTION (MOVED TO BOTTOM)st.markdown("""Who I AmI’m V Sree Kirthana, an AI specialist, full-stack developer, and automation engineer based in Hyderabad, India. Currently pursuing my B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning (AIML), my core focus is bridging the gap between raw datasets and production-ready machine learning architectures.I engineer automated, self-sustaining AI workflows and the full-stack systems required to support them. My practical experience includes processing analytical data and building predictive algorithms as a Data Science Intern at CodSoft, alongside building robust web frameworks during my Full-Stack Development stint at Cognifyz Technologies. I've also advanced my capabilities in prompt engineering and next-gen autonomous systems through the Outskill GenAI Mastermind Program. Whether I am integrating generative AI tools, optimizing data pipelines, or writing core Python logic, I don't just write code—I architect intelligent solutions that solve real-world bottlenecks.Connect with me:Bento.me / GitHub |LinkedIn""",unsafe_allow_html=True)# 7. LEGAL FOOTER AND DISCLAIMERst.markdown("""Privacy Policy |Terms & ConditionsNote: This application currently runs on a free-tier API. If you encounter an "API limit reached" error, I apologize for the inconvenience! A future update is coming soon to upgrade the model to a paid version for uninterrupted access.""",unsafe_allow_html=True)st.markdown('', unsafe_allow_html=True) # End landing-wrapper
