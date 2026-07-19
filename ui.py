@@ -106,7 +106,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
         .glass-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3); 
-            border: 1px solid rgba(355, 355, 355, 0.35);
+            border: 1px solid rgba(455, 455, 455, 0.45);
         }
 
         /* MASSIVE HEADINGS */
