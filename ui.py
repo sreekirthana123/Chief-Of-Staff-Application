@@ -61,7 +61,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
       .element-container > div,
       ul li,  /* Unordered lists */
        ol li {  /* Ordered lists */ 
-          font-size: 35px !important;
+          font-size: 33px !important;
        }
         /* The Aurora Background */
         .stApp {
