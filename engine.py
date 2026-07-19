@@ -31,7 +31,7 @@ from triage import triage_inbox, format_digest
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
-DEFAULT_MAX_RESULTS = 1
+DEFAULT_MAX_RESULTS = 20
 GMAIL_USER_ID = "me"
 
 # ── Header extraction utilities ───────────────────────────────────────────────
