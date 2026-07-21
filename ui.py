@@ -27,7 +27,7 @@ def apply_app_theme() -> None:
         color: #3A2A1E !important;
     }
     h3, [data-testid="stHeading"] h3, .stApp h3 {
-        font-size: 1.8rem !important;
+        font-size: 2.0rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
@@ -38,7 +38,7 @@ def apply_app_theme() -> None:
     }
 
     .stButton > button, button[kind="primary"], button[kind="secondary"] {
-        font-size: 1.15rem !important;
+        font-size: 2.0rem !important;
         padding: 0.6rem 1.4rem !important;
     }
     button[kind="primary"] {
