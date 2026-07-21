@@ -83,7 +83,7 @@ def apply_app_theme() -> None:
     [data-testid="stExpander"] summary p,
     [data-testid="stExpander"] summary div {
         color: #3A2A1E !important;
-        font-size: 1.2rem !important;
+        font-size: 2.2rem !important;
         font-weight: 700 !important;
     }
     [data-testid="stExpander"] summary svg {
@@ -93,7 +93,7 @@ def apply_app_theme() -> None:
     [data-testid="stTextArea"] textarea {
         background-color: #F6F1E4 !important;
         color: #3A2A1E !important;
-        font-size: 1.1rem !important;
+        font-size: 2.1rem !important;
         border: 1px solid #E8DCC8 !important;
         opacity: 1 !important;
         -webkit-text-fill-color: #3A2A1E !important;
