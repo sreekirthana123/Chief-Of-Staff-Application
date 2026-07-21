@@ -17,12 +17,12 @@ def apply_app_theme() -> None:
     }
 
     h1, [data-testid="stHeading"] h1, .stApp h1 {
-        font-size: 2.8rem !important;
+        font-size: 2.0rem !important;
         font-weight: 800 !important;
         color: #3A2A1E !important;
     }
     h2, [data-testid="stHeading"] h2, .stApp h2 {
-        font-size: 4.5rem !important;
+        font-size: 3.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
