@@ -32,7 +32,7 @@ def apply_app_theme() -> None:
         color: #3A2A1E !important;
     }
     .stApp p, .stApp span, .stApp label, .stApp li {
-        font-size: 2.2rem !important;
+        font-size: 2.0rem !important;
         line-height: 1.7 !important;
         color: #3A2A1E;
     }
