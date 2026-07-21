@@ -17,7 +17,7 @@ def apply_app_theme() -> None:
     }
 
     h1, [data-testid="stHeading"] h1, .stApp h1 {
-        font-size: 2.0rem !important;
+        font-size: 3.0rem !important;
         font-weight: 800 !important;
         color: #3A2A1E !important;
     }
@@ -27,18 +27,18 @@ def apply_app_theme() -> None:
         color: #3A2A1E !important;
     }
     h3, [data-testid="stHeading"] h3, .stApp h3 {
-        font-size: 2.0rem !important;
+        font-size: 2.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
     .stApp p, .stApp span, .stApp label, .stApp li {
-        font-size: 2.0rem !important;
+        font-size: 2.8rem !important;
         line-height: 1.7 !important;
         color: #3A2A1E;
     }
 
     .stButton > button, button[kind="primary"], button[kind="secondary"] {
-        font-size: 2.0rem !important;
+        font-size: 3.0rem !important;
         padding: 0.6rem 1.4rem !important;
     }
     button[kind="primary"] {
@@ -58,7 +58,7 @@ def apply_app_theme() -> None:
     }
 
     [data-testid="stSegmentedControl"] label {
-        font-size: 1.05rem !important;
+        font-size: 2.05rem !important;
         font-weight: 600 !important;
         padding: 10px 18px !important;
         border-radius: 10px !important;
