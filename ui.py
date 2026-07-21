@@ -107,7 +107,7 @@ def apply_app_theme() -> None:
     }
     [data-testid="stMetricValue"] {
         color: #3A2A1E !important;
-        font-size: 1.6rem !important;
+        font-size: 2.6rem !important;
     }
     [data-testid="stMetricLabel"] {
         font-size: 1.05rem !important;
