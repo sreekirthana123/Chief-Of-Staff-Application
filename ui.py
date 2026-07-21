@@ -10,7 +10,7 @@ def apply_app_theme() -> None:
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
     section[data-testid="stSidebar"] {
-        background: #6B4429 !important;
+        background: #8A5B3B !important;
     }
     section[data-testid="stSidebar"] * {
         color: #FAF3E7 !important;
@@ -62,6 +62,18 @@ def apply_app_theme() -> None:
         padding: 12px 16px;
     }
     [data-testid="stMetricValue"] { color: #3A2A1E !important; }
+
+    .stApp h1 { font-size: 2.6rem !important; font-weight: 800 !important; }
+    .stApp h2 { font-size: 2.1rem !important; font-weight: 700 !important; }
+    .stApp h3 { font-size: 1.7rem !important; font-weight: 700 !important; }
+    .stApp p, .stApp span, .stApp label, .stApp li {
+        font-size: 1.15rem !important;
+        line-height: 1.65 !important;
+    }
+    [data-testid="stExpander"] summary {
+        font-size: 1.2rem !important;
+        font-weight: 700 !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
