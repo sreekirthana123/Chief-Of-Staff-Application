@@ -17,22 +17,22 @@ def apply_app_theme() -> None:
     }
 
     h1, [data-testid="stHeading"] h1, .stApp h1 {
-        font-size: 3.8rem !important;
+        font-size: 2.5rem !important;
         font-weight: 800 !important;
         color: #3A2A1E !important;
     }
     h2, [data-testid="stHeading"] h2, .stApp h2 {
-        font-size: 3.8rem !important;
+        font-size: 1.8rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
     h3, [data-testid="stHeading"] h3, .stApp h3 {
-        font-size: 3.5rem !important;
+        font-size: 2.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
     .stApp p, .stApp span, .stApp label, .stApp li {
-        font-size: 3.5rem !important;
+        font-size: 1.5rem !important;
         line-height: 1.7 !important;
         color: #3A2A1E;
     }
