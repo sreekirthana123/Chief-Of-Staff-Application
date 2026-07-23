@@ -83,7 +83,7 @@ def apply_app_theme() -> None:
     [data-testid="stExpander"] summary p,
     [data-testid="stExpander"] summary div {
         color: #3A2A1E !important;
-        font-size: 3.8rem !important;
+        font-size: 1.8rem !important;
         font-weight: 700 !important;
     }
     [data-testid="stExpander"] summary svg {
