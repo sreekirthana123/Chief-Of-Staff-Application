@@ -16,17 +16,20 @@ def apply_app_theme() -> None:
         color: #FAF3E7 !important;
     }
 
-    h1, [data-testid="stHeading"] h1, .stApp h1 {
+    h1, [data-testid="stHeading"] h1, [data-testid="stMarkdownContainer"] h1,
+    .element-container h1, .stApp h1 {
         font-size: 3.5rem !important;
         font-weight: 800 !important;
         color: #3A2A1E !important;
     }
-    h2, [data-testid="stHeading"] h2, .stApp h2 {
+    h2, [data-testid="stHeading"] h2, [data-testid="stMarkdownContainer"] h2,
+    .element-container h2, .stApp h2 {
         font-size: 3.8rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
-    h3, [data-testid="stHeading"] h3, .stApp h3 {
+    h3, [data-testid="stHeading"] h3, [data-testid="stMarkdownContainer"] h3,
+    .element-container h3, .stApp h3 {
         font-size: 2.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
