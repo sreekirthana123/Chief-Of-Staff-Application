@@ -27,7 +27,7 @@ def apply_app_theme() -> None:
         color: #3A2A1E !important;
     }
     h3, [data-testid="stHeading"] h3, .stApp h3 {
-        font-size: 2.5rem !important;
+        font-size: 3.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
