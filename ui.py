@@ -58,7 +58,7 @@ def apply_app_theme() -> None:
     }
 
     [data-testid="stSegmentedControl"] label {
-        font-size: 1.05rem !important;
+        font-size: 3.05rem !important;
         font-weight: 600 !important;
         padding: 10px 18px !important;
         border-radius: 10px !important;
