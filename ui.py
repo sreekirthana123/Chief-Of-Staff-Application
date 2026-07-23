@@ -38,7 +38,7 @@ def apply_app_theme() -> None:
     }
 
     .stButton > button, button[kind="primary"], button[kind="secondary"] {
-        font-size: 2.0rem !important;
+        font-size: 3.0rem !important;
         padding: 0.6rem 1.4rem !important;
     }
     button[kind="primary"] {
