@@ -117,7 +117,7 @@ def apply_app_theme() -> None:
     }
 
     .phase-title {
-        font-size: 3.8rem !important;
+        font-size: 2.8rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
         margin: 0.5rem 0 1rem 0 !important;
