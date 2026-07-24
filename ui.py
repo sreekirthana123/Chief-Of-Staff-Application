@@ -16,19 +16,19 @@ def apply_app_theme() -> None:
         color: #FAF3E7 !important;
     }
 
-    h1, [data-testid="stHeading"] h1, [data-testid="stMarkdownContainer"] h1,
+    h1, h1[id], [data-testid="stHeading"] h1, [data-testid="stMarkdownContainer"] h1,
     .element-container h1, .stApp h1 {
         font-size: 3.5rem !important;
         font-weight: 800 !important;
         color: #3A2A1E !important;
     }
-    h2, [data-testid="stHeading"] h2, [data-testid="stMarkdownContainer"] h2,
+    h2, h2[id], [data-testid="stHeading"] h2, [data-testid="stMarkdownContainer"] h2,
     .element-container h2, .stApp h2 {
         font-size: 3.8rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
-    h3, [data-testid="stHeading"] h3, [data-testid="stMarkdownContainer"] h3,
+    h3, h3[id], [data-testid="stHeading"] h3, [data-testid="stMarkdownContainer"] h3,
     .element-container h3, .stApp h3 {
         font-size: 2.5rem !important;
         font-weight: 700 !important;
@@ -125,13 +125,13 @@ def render_aurora_landing_page(auth_url: str) -> None:
     """
     <style>
       /* Increase font-size for ALL body texts AND lists */
-      p,
-      .markdown-text,
-      .element-container > div,
+    p,
+    .markdown-text,
+    .element-container > div,
       ul li,  /* Unordered lists */
        ol li {  /* Ordered lists */ 
-          font-size: 27px !important;
-       }
+        font-size: 27px !important;
+        line-height: 1.65 !important;}
         /* The Aurora Background */
         .stApp {
             background: 
