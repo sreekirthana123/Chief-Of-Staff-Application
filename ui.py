@@ -24,7 +24,7 @@ def apply_app_theme() -> None:
     }
     h2, h2[id], [data-testid="stHeading"] h2, [data-testid="stMarkdownContainer"] h2,
     .element-container h2, .stApp h2 {
-        font-size: 3.8rem !important;
+        font-size: 2.8rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
@@ -41,7 +41,7 @@ def apply_app_theme() -> None:
     }
 
     .stButton > button, button[kind="primary"], button[kind="secondary"] {
-        font-size: 3.0rem !important;
+        font-size: 2.0rem !important;
         padding: 0.6rem 1.4rem !important;
     }
     button[kind="primary"] {
