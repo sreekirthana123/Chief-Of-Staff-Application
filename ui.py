@@ -96,7 +96,7 @@ def apply_app_theme() -> None:
     [data-testid="stTextArea"] textarea {
         background-color: #F6F1E4 !important;
         color: #3A2A1E !important;
-        font-size: 1.6rem !important;
+        font-size: 2.6rem !important;
         border: 1px solid #E8DCC8 !important;
         opacity: 1 !important;
         -webkit-text-fill-color: #3A2A1E !important;
