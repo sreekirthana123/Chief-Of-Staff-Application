@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode, urlparse
 # Ensure this is at the bottom of app.py
-from ui import render_aurora_landing_page, apply_app_theme
+from ui import render_aurora_landing_page, apply_app_theme, render_phase_title
 
 import streamlit as st
 from google.oauth2.credentials import Credentials
@@ -847,7 +847,7 @@ def render_sidebar() -> None:
 # Phase 1: Inbox & Triage
 # -----------------------------------------------------------------------------
 def render_inbox_phase() -> None:
-    st.header("📥 Inbox & Triage")
+    render_phase_title("📥 Inbox & Triage")
     st.write(
         "Pull threads from the selected source, then triage them by priority. "
         "Once triaged, the highest-priority threads move to *Draft Generation*."
@@ -948,7 +948,7 @@ def render_inbox_phase() -> None:
 # Phase 2: Draft Generation
 # -----------------------------------------------------------------------------
 def render_draft_generation_phase() -> None:
-    st.header("📝 Draft Generation")
+    render_phase_title("📝 Draft Generation")
 
     actionable = get_actionable_threads()
 
@@ -1069,6 +1069,19 @@ def _apply_approval_gate_css() -> None:
     st.markdown(
         """
         <style>
+        [data-testid="stExpander"] {
+            background-color: #FFFFFF;
+            border: 1px solid #E8DCC8;
+            border-radius: 12px;
+        }
+        [data-testid="stExpander"] summary {
+            background-color: #F6F1E4;
+            color: #3A2A1E !important;
+            border-radius: 12px;
+        }
+        [data-testid="stExpander"] summary * {
+            color: #3A2A1E !important;
+        }
         .thread-box {
             background: #FFFFFF;
             border: 1px solid #E8DCC8;
@@ -1076,7 +1089,11 @@ def _apply_approval_gate_css() -> None:
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 15px;
-            color: #3A2A1E;
+            color: #3A2A1E !important;
+            font-size: 1.1rem;
+        }
+        .thread-box * {
+            color: #3A2A1E !important;
         }
         .draft-box {
             background: #F6F1E4;
@@ -1085,7 +1102,11 @@ def _apply_approval_gate_css() -> None:
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 15px;
-            color: #3A2A1E;
+            color: #3A2A1E !important;
+            font-size: 1.1rem;
+        }
+        .draft-box * {
+            color: #3A2A1E !important;
         }
         .status-approved {
             background: #E7EDD6;
@@ -1131,7 +1152,7 @@ def render_thread_html(thread: dict[str, Any]) -> str:
 
 def render_approval_gate_phase() -> None:
     _apply_approval_gate_css()
-    st.header("✅ Approval Gate")
+    render_phase_title("✅ Approval Gate")
     st.write(
         "Review each AI-generated draft below. You can **Approve**, **Edit**, "
         "or **Reject** each draft. Only explicitly approved drafts move to Export."
@@ -1562,7 +1583,7 @@ def render_approval_gate_phase() -> None:
 # Phase 4: Export Proof
 # -----------------------------------------------------------------------------
 def render_export_proof_phase() -> None:
-    st.header("📄 Export Proof")
+    render_phase_title("📄 Export Proof")
 
     if not st.session_state.approved:
         st.warning("No approved drafts to export. Go to **Approval Gate** first and approve some drafts.")
