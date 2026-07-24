@@ -30,7 +30,7 @@ def apply_app_theme() -> None:
     }
     h3, h3[id], [data-testid="stHeading"] h3, [data-testid="stMarkdownContainer"] h3,
     .element-container h3, .stApp h3 {
-        font-size: 3.5rem !important;
+        font-size: 2.5rem !important;
         font-weight: 700 !important;
         color: #3A2A1E !important;
     }
