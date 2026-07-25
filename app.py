@@ -1341,7 +1341,8 @@ def render_approval_gate_phase() -> None:
                                 st.success("📤 Sent successfully")
                             else:
                                 if st.button("📤 Send", key=f"send_btn_{thread_id}",
-                                            use_container_width=True):
+                                            use_container_width=True,
+                                            disabled=not approved_draft.strip()):
                                     try:
                                         result = send_reply(
                                             thread_id=thread_id,
@@ -1443,7 +1444,8 @@ def render_approval_gate_phase() -> None:
                             st.success("📤 Sent successfully")
                         else:
                             if st.button("📤 Send", key=f"send_btn_{thread_id}",
-                                         use_container_width=True):
+                                         use_container_width=True,
+                                         disabled=not approved_draft.strip()):
                                 try:
                                     result = send_reply(
                                         thread_id=thread_id,
@@ -1490,6 +1492,9 @@ def render_approval_gate_phase() -> None:
 
                 else:
                     # Pending: show draft in a draft-box
+                    draft_is_empty = not draft_data.get("draft", "").strip()
+                    if draft_is_empty:
+                        st.warning("⚠️ Draft generation failed for this thread (likely a quota/rate limit issue). Click REGENERATE before approving.")
                     st.markdown(
                         f'<div class="draft-box"><pre style="white-space: pre-wrap; margin: 0;">{draft_data.get("draft", "")}</pre></div>',
                         unsafe_allow_html=True,
@@ -1500,7 +1505,8 @@ def render_approval_gate_phase() -> None:
                     btn_col1, btn_col2, btn_col3 = st.columns([1, 1, 1])
 
                     with btn_col1:
-                        if st.button("✅ APPROVE", key=f"approve_btn_{thread_id}", use_container_width=True):
+                        if st.button("✅ APPROVE", key=f"approve_btn_{thread_id}",
+                                     use_container_width=True, disabled=draft_is_empty):
                             st.session_state.approved[thread_id] = {
                                 "draft": draft_data.get("draft", ""),
                                 "thread": thread,
