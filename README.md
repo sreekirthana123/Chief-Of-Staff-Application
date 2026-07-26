@@ -43,8 +43,9 @@ Chief-Of-Staff-Application/
 └── TERMS.md                # Terms & Conditions
 ---
 ```
-##Inside the app
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7126b3f-af91-439b-ae60-597f3e677aba" />
+## Inside the app
+<img width="1920" height="920" alt="Screenshot (1529)" src="https://github.com/user-attachments/assets/48fdab39-cd2a-440a-92d5-3c80e0e1df7b" />
+
 ---
 ```
 ## 📬 Connect & Share Feedback
