@@ -787,6 +787,7 @@ def generate_proof_html() -> str:
 # -----------------------------------------------------------------------------
 def render_sidebar() -> None:
     apply_app_theme()
+    
     with st.sidebar:
         st.title("✍️ The Draft Desk")
         triaged_count = len(st.session_state.triaged)
@@ -1670,7 +1671,10 @@ def render_export_proof_phase() -> None:
                 st.markdown(f"**{thread_subject}**")
             
             with col3:
-                st.code(detail)
+                st.markdown(
+                    f"<div style='background-color: #FFFFFF; color: #3A2A1E; padding: 8px 12px; border: 1px solid #E8DCC8; border-radius: 8px; font-family: monospace; font-size: 0.95rem; word-break: break-all;'>{detail}</div>",
+                    unsafe_allow_html=True
+                )
             
             with col4:
                 st.caption(formatted_time)
