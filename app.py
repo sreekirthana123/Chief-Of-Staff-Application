@@ -1519,7 +1519,8 @@ def render_approval_gate_phase() -> None:
                             st.rerun()
 
                     with btn_col2:
-                        if st.button("✏️ EDIT", key=f"edit_btn_{thread_id}", use_container_width=True):
+                        if st.button("✏️ EDIT", key=f"edit_btn_{thread_id}", use_container_width=True,
+                                     type="primary"):
                             st.session_state[f"editing_{thread_id}"] = True
                             st.rerun()
 
