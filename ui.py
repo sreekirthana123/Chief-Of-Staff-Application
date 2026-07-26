@@ -124,6 +124,17 @@ def apply_app_theme() -> None:
         font-size: 1.05rem !important;
     }
 
+    [data-testid="stCodeBlock"],
+    [data-testid="stCodeBlock"] pre,
+    [data-testid="stCodeBlock"] code {
+        background-color: #FFFFFF !important;
+        color: #3A2A1E !important;
+    }
+    [data-testid="stCodeBlock"] {
+        border: 1px solid #E8DCC8 !important;
+        border-radius: 8px !important;
+    }
+
     .phase-title {
         font-size: 3.8rem !important;
         font-weight: 700 !important;
