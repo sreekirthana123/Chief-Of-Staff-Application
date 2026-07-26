@@ -1704,6 +1704,7 @@ def render_export_proof_phase() -> None:
             file_name=f"draft_desk_proof_{datetime.now().strftime('%Y%m%d_%H%M')}.md",
             mime="text/markdown",
             use_container_width=True,
+            type="primary",
         )
     with btn_col2:
         st.download_button(
@@ -1712,6 +1713,7 @@ def render_export_proof_phase() -> None:
             file_name=f"draft_desk_proof_{datetime.now().strftime('%Y%m%d_%H%M')}.html",
             mime="text/html",
             use_container_width=True,
+            type="primary",
         )
 
     st.divider()
