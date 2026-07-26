@@ -43,16 +43,16 @@ Chief-Of-Staff-Application/
 └── TERMS.md                # Terms & Conditions
 
 ---
-
+```
 ## 📬 Connect & Share Feedback
 
 I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
 
 * **Connect with me:** [My LinkedIn Profile](https://www.linkedin.com/in/v-sree-kirthana-565b4a367)
-* **Share Feedback:** [Create a GitHub Issue](https://github.com/sreekirthana123/Chief-Of-Staff-Application/issues) 
-
+* **Share Feedback:** [Create a GitHub Issue](https://github.com/sreekirthana123/Chief-Of-Staff-Application/issues)
 ---
 
+``
 ## 📜 License
 
 &copy; 2026 V. Sree Kirthana. All rights reserved.  
