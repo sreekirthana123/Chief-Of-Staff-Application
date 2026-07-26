@@ -41,7 +41,10 @@ Chief-Of-Staff-Application/
 ├── requirements.txt        # Project dependencies (Streamlit, Google Auth, etc.)
 ├── PRIVACY.md              # Privacy Policy 
 └── TERMS.md                # Terms & Conditions
-
+---
+```
+##Inside the app
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f7126b3f-af91-439b-ae60-597f3e677aba" />
 ---
 ```
 ## 📬 Connect & Share Feedback
