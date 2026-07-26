@@ -1342,7 +1342,8 @@ def render_approval_gate_phase() -> None:
                             else:
                                 if st.button("📤 Send", key=f"send_btn_{thread_id}",
                                             use_container_width=True,
-                                            disabled=not approved_draft.strip()):
+                                            disabled=not approved_draft.strip(),
+                                            type="primary"):
                                     try:
                                         result = send_reply(
                                             thread_id=thread_id,
@@ -1445,7 +1446,8 @@ def render_approval_gate_phase() -> None:
                         else:
                             if st.button("📤 Send", key=f"send_btn_{thread_id}",
                                          use_container_width=True,
-                                         disabled=not approved_draft.strip()):
+                                         disabled=not approved_draft.strip(),
+                                         type="primary"):
                                 try:
                                     result = send_reply(
                                         thread_id=thread_id,
@@ -1475,7 +1477,8 @@ def render_approval_gate_phase() -> None:
                         unsafe_allow_html=True,
                     )
                     # Regenerate button for rejected drafts
-                    if st.button("🔄 REGENERATE", key=f"regen_rejected_{thread_id}", use_container_width=True):
+                    if st.button("🔄 REGENERATE", key=f"regen_rejected_{thread_id}", use_container_width=True,
+                                 type="primary"):
                         with st.spinner("Regenerating draft..."):
                             try:
                                 result = draft_reply_with_metadata(thread)
@@ -1506,7 +1509,8 @@ def render_approval_gate_phase() -> None:
 
                     with btn_col1:
                         if st.button("✅ APPROVE", key=f"approve_btn_{thread_id}",
-                                     use_container_width=True, disabled=draft_is_empty):
+                                     use_container_width=True, disabled=draft_is_empty,
+                                     type="primary"):
                             st.session_state.approved[thread_id] = {
                                 "draft": draft_data.get("draft", ""),
                                 "thread": thread,
@@ -1523,7 +1527,8 @@ def render_approval_gate_phase() -> None:
 
                     with btn_col3:
                         # REPLACE EVERYTHING BELOW THIS LINE inside the 'with' block
-                        if st.button("🔄 REGENERATE", key=f"regen_pending_{thread_id}", use_container_width=True):
+                        if st.button("🔄 REGENERATE", key=f"regen_pending_{thread_id}", use_container_width=True,
+                                     type="primary"):
                             with st.spinner("Regenerating draft..."):
                                 try:
                                     result = draft_reply_with_metadata(thread)
