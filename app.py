@@ -1621,11 +1621,22 @@ def render_export_proof_phase() -> None:
             col_left, col_right = st.columns([1, 1], gap="large")
             with col_left:
                 st.markdown("**📨 Original Thread**")
+                
+                # Combine all messages into a single string
+                thread_history = ""
                 for msg in messages:
-                    st.caption(f"{msg.get('from', 'Unknown')} · {msg.get('date', '')}")
-                    safe_body = msg.get("body", "").replace("\n", "<br>")
-                    st.markdown(f"<div style='white-space: pre-wrap;'>{safe_body}</div>", unsafe_allow_html=True)
-                    st.divider()
+                    thread_history += f"From: {msg.get('from', 'Unknown')} · {msg.get('date', '')}\n"
+                    thread_history += f"{msg.get('body', '').strip()}\n\n"
+                
+                # Render inside a text area to match the draft box
+                st.text_area(
+                    "Original Thread Content",
+                    value=thread_history.strip(),
+                    height=200,
+                    disabled=True,
+                    label_visibility="collapsed",
+                    key=f"export_original_{thread_id}",
+                )
             with col_right:
                 st.markdown("**🤖 Approved Draft Reply**")
                 st.text_area(
