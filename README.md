@@ -1,94 +1,60 @@
-# Chief of Staff AI: Intelligent Triage & Autonomous Scheduling
+<div align="center">
+  <p>🚀 Built with Passion by</p>
+  <h2>V Sree Kirthana</h2>
+</div>
 
-An end-to-end AI agent project exploring autonomous inbox management, leveraging advanced LLMs to evaluate email context, identify priority levels, automatically draft contextual responses, and manage calendar scheduling via Google Workspace APIs.
+# 👑 Chief of Staff AI
 
-### Project Access & Resources
-* **Live Interactive Application:** [View Live App Here](#) *(Replace with your Streamlit link)*
-* **Architecture Documentation:** [View Privacy Policy & Terms](PRIVACY.md)
-* **GitHub Repository:** [Access Source Code](#)
+**Intelligent Triage & Autonomous Scheduling for your Inbox.**  
+[🔗 Access the Live App Here](https://sree-kirthana-chief-of-staff.streamlit.app)
 
----
-
-### Problem Statement
-
-Professionals and executives frequently struggle with severe inbox overload, where critical communications are buried under newsletters, low-priority updates, and spam. Manually triaging emails, drafting repetitive responses, and cross-referencing availability for meeting requests consumes hours of high-value time.
-
-This project solves these challenges by leveraging **Google Gemini 2.5 Flash** to execute automated data extraction, intent analysis, and response generation, paired with an interactive **Streamlit Dashboard** utilizing a secure, Human-in-the-Loop "Approval Gate" to ensure total user control over outbound communications and calendar events.
+Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: Urgent, Needs Reply, FYI, and Ignore, while intelligently drafting responses and managing your calendar.
 
 ---
 
-### Phase 1: Inbox & Triage
+## 🛠 Tech Stack
 
-To process live communications, the system connects to the user's Google Workspace to pull active email threads and uses AI to transform unstructured inbox data into prioritized, structured categories.
-
-* **Process:** Utilizes the Gmail API via OAuth 2.0 to securely fetch active unread threads.
-* **AI Integration:** Passes thread text to Gemini 2.5 Flash to analyze the context, intent, and urgency of every message.
-* **Classification Validation:** Automatically assigns a strict priority bucket to each thread: **Urgent (🔴)**, **Needs Reply (⚪)**, **FYI (🟢)**, and **Ignore (⚫)**.
-
----
-
-### Phase 2: Draft Generation
-
-Analyzes the context of actionable emails to instantly generate highly relevant, professional responses, reducing manual typing time to zero.
-
-* **The "Brain":** Evaluates the specific request or question within threads flagged as *Urgent* or *Needs Reply*.
-* **Response Generation:** Interfaces with the Gemini AI Engine to formulate a contextual draft tailored to the tone of the original message.
-* **Graceful Handling:** Implements robust error handling for API rate limits to ensure continuous operation.
+* **Framework:** Streamlit (Custom Aurora Glassmorphism UI)
+* **AI/LLM:** Google Gemini 2.5 Flash
+* **Processing:** Gmail API & Google Calendar API (OAuth 2.0 Web Flow)
+* **Deployment:** Streamlit Community Cloud
 
 ---
 
-### Phase 3: Approval Gate (Human-in-the-Loop)
+## 📂 Project Structure
 
-This analysis breaks down the generated drafts and presents them in an interactive dashboard, ensuring no automated actions occur without explicit consent.
-
-* **Total Control:** Displays original email threads side-by-side with the AI-generated drafts.
-* **Actionable Options:** Provides the user with three distinct controls for every draft: *Regenerate*, *Edit*, or *Approve*.
-* **Secure Dispatch:** Dispatches emails directly to the recipient via the Gmail API only after the user clicks "Send" on an approved draft. Mistakes do not make it to the outbox.
-
----
-
-### Phase 4: Smart Calendar Scheduling & Export Proof
-
-This phase evaluates temporal requests and manages the logic required to keep the user's schedule organized and auditable.
-
-* **Automated Scheduling:** The AI parses incoming emails for meeting requests or proposed times, cross-references availability, and autonomously books the event directly onto **Google Calendar**.
-* **Export Proof:** Maintains a complete audit trail of the AI's work, allowing the user to download a full Proof of Work report as a cleanly formatted Markdown (`.md`) or HTML (`.html`) file.
+* **`app.py`:** The main entry point; manages the Streamlit UI, OAuth 2.0 authentication flow, and the four-phase dashboard pipeline (Triage, Drafts, Approval, Export).
+* **`engine.py`:** The core logic engine; securely fetches live email threads and interfaces with Gemini 2.5 Flash to analyze intent, assign priority, and generate professional drafts.
+* **`ui.py`:** The frontend module; houses the custom CSS (including White Glassmorphism and Aurora gradients) and renders the structured landing page.
+* **`PRIVACY.md` & `TERMS.md`:** Documentation explicitly outlining the Human-in-the-Loop security model and data handling protocols.
 
 ---
 
-### Strategic Recommendations & Action Plan
+## 📂 Folder Structure
 
-Based on the AI triage logic and response generation capabilities, the following core productivity strategies are automated by the system:
-
-**Attention & Focus Optimization:**
-* **Energy Allocation:** By filtering out *FYI* and *Ignore* emails, maximum mental resources are conserved for high-stakes, *Urgent* communications.
-* **Automated Delegation:** Repetitive scheduling and standard reply tasks are fully delegated to the AI engine, acting as a true Chief of Staff.
-
-**Security & Workflow Allocation:**
-* Prioritize human oversight by strictly adhering to the Phase 3 Approval Gate.
-* Maintain consistent adherence to secure OAuth 2.0 Web Flow practices, ensuring email data is processed in temporary session states rather than stored permanently.
-
----
-
-### Technical Tool Stack & Development Workflow
-
-* **Python & Google Gemini 2.5 Flash:** Applied for intelligent text parsing, intent classification, and contextual response generation—utilizing advanced prompting logic to execute multi-layered triage calculations.
-* **Streamlit (Custom Aurora UI):** Leveraged for the main entry point, managing user interactions, authentication flows, and dynamic UI rendering using a custom "White Glassmorphism" CSS framework.
-* **Google Cloud Platform (GCP):** Utilized for cloud infrastructure, managing the OAuth 2.0 Web Flow (PKCE), and handling API quotas.
-* **External Integrations:** Gmail API and Google Calendar API cross-validated against user consent scopes to execute read/write operations securely.
+```text
+Chief-Of-Staff-Application/
+├── .streamlit/             # App configuration (theme settings)
+├── app.py                  # Main Streamlit dashboard UI & routing
+├── engine.py               # AI triage, drafting, and Google API logic
+├── ui.py                   # Custom CSS styling and landing page structure
+├── requirements.txt        # Project dependencies (Streamlit, Google Auth, etc.)
+├── PRIVACY.md              # Privacy Policy 
+└── TERMS.md                # Terms & Conditions
 
 ---
 
-### Conclusion
+## 📬 Connect & Share Feedback
 
-This project demonstrates an end-to-end AI automation workflow, turning a chaotic inbox into a streamlined, prioritized task list. 
+I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
 
-By combining Google Workspace APIs with the dynamic reasoning capabilities of Gemini 2.5 Flash, the project provides a structured, secure approach to inbox management—highlighting urgent needs, generating immediate drafts, and booking meetings autonomously. The findings offer a strong foundation for supporting data-driven decisions in personal productivity and executive time management.
+* **Connect with me:** [My LinkedIn Profile](https://www.linkedin.com/in/v-sree-kirthana-565b4a367)
+* **Share Feedback:** [Create a GitHub Issue](https://github.com/sreekirthana123/Chief-Of-Staff-Application/issues) 
 
 ---
 
-### Future Work
+## 📜 License
 
-* **Expanded Model Upgrades:** Upgrading from free-tier AI APIs to paid enterprise models to handle significantly higher daily token throughput and avoid rate-limiting.
-* **Tone Personalization:** Incorporating few-shot learning by ingesting the user's sent folder to match their exact writing style and vocabulary dynamically.
-* **Predictive Analytics:** Exploring forecasting models to estimate peak email volume days and preemptively block out "focus time" on the user's calendar.
+&copy; 2026 V. Sree Kirthana. All rights reserved.  
+This project was developed as part of a project.  
+Unauthorized reproduction or distribution is not permitted without explicit consent from the author.
