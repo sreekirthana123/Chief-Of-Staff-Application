@@ -47,7 +47,7 @@ Chief-Of-Staff-Application/
 <img width="1920" height="920" alt="Screenshot (1529)" src="https://github.com/user-attachments/assets/48fdab39-cd2a-440a-92d5-3c80e0e1df7b" />
 
 ---
-```
+
 ## 📬 Connect & Share Feedback
 
 I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
