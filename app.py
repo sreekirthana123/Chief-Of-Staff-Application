@@ -1378,7 +1378,8 @@ def render_approval_gate_phase() -> None:
                                     st.success("📅 Booked")
                             else:
                                 if st.button("📅 Book Meeting", key=f"book_btn_{thread_id}",
-                                            use_container_width=True):
+                                            use_container_width=True,
+                                            type="primary"):
                                     try:
                                         parse_req, find_slot, create_evt = get_calendar_engine()
 
