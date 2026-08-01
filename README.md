@@ -23,10 +23,23 @@ Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekee
 
 ## 📂 Project Structure
 
-* **`app.py`:** The main entry point; manages the Streamlit UI, OAuth 2.0 authentication flow, and the four-phase dashboard pipeline (Triage, Drafts, Approval, Export).
-* **`engine.py`:** The core logic engine; securely fetches live email threads and interfaces with Gemini 2.5 Flash to analyze intent, assign priority, and generate professional drafts.
-* **`ui.py`:** The frontend module; houses the custom CSS (including White Glassmorphism and Aurora gradients) and renders the structured landing page.
-* **`PRIVACY.md` & `TERMS.md`:** Documentation explicitly outlining the Human-in-the-Loop security model and data handling protocols.
+* **`app.py`**: The main entry point; manages the Streamlit UI, OAuth 2.0 authentication flow, and the four-phase dashboard pipeline (Triage, Drafts, Approval, Export).
+* **`engine.py`**: The core logic engine; securely fetches live email threads and interfaces with Gemini 2.5 Flash to analyze intent, assign priority, and route data.
+* **`ui.py`**: The frontend module; houses the custom CSS (including the Aurora gradients and dark mode themes) and renders the structured landing page.
+* **`approval_gate.py`**: Manages the Human-in-the-Loop UI, rendering side-by-side drafts and handling the logic for Regenerating, Editing, or Approving emails.
+* **`draft_machine.py`**: The dedicated AI module that constructs strict prompts for Gemini to generate highly contextual, professional email responses.
+* **`calendar_engine.py`**: Interfaces with the Google Calendar API to parse meeting requests, check availability, and autonomously schedule events.
+* **`context_builder.py`**: Processes raw email threads and historical data to build accurate, token-efficient context windows for the LLM.
+* **`SRS - Chief of Staff AI.pdf`**: The official Software Requirements Specification document detailing system architecture, data flow, and functional requirements.
+* **`PRIVACY.md` & `TERMS.md`**: Legal documentation explicitly outlining the Human-in-the-Loop security model, data handling protocols, and user terms.
+* **`DEPLOYMENT.md`**: Technical documentation outlining the steps, architecture, and environment variables required to deploy the application to production.
+* **`requirements.txt`**: Lists all Python dependencies and external libraries required to run the application.
+* **`action_log.json`**: A local storage file that maintains a secure audit trail of all system actions, triage decisions, and errors.
+* **`approved_drafts.json`**: Temporary local database that securely holds drafts that have passed human approval before final dispatch.
+* **`past_replies.json`**: Stores historical communication data to provide the LLM with few-shot examples to better mimic the user's personal writing style.
+* **`emails.txt`**: A temporary local text file used for logging raw email payloads during the extraction phase.
+* **`.streamlit/`**: Configuration directory holding the application's Streamlit-specific theme overrides and server settings.
+* **`Gmail-MCP-Server/`**: Backend directory containing server configurations for advanced Gmail Model Context Protocol integration.
 ---
 ``
 ## ⚙️ System Pipeline (The 4 Phases)
