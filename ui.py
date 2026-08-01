@@ -205,7 +205,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             width: 100%; 
             max-width: 100%;
             margin: 0 auto;
-            padding: 40px 2%; /* Uses percentage to hug the edges */
+            padding: 60px 2%; /* Uses percentage to hug the edges */
             box-sizing: border-box;
         }
 
