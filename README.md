@@ -126,7 +126,8 @@ Connecting a fully autonomous, unchecked AI to a personal or corporate inbox is 
 ---
 ```
 ## Inside the app
-<img width="1920" height="960" alt="Screenshot (1546)" src="https://github.com/user-attachments/assets/ac29c617-8b35-4b24-b682-7bdeda9f806d" />
+<img width="1920" height="965" alt="Screenshot (1559)" src="https://github.com/user-attachments/assets/53685b78-5fe8-464a-9263-22b9bdc6f827" />
+
 
 <img width="1920" height="975" alt="Screenshot (1530)" src="https://github.com/user-attachments/assets/413cc212-b767-4bf7-8ada-6a446afdeb91" />
 
