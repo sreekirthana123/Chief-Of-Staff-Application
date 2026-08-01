@@ -308,7 +308,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 2.6rem; 
+            font-size: 3.3rem; 
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
