@@ -11,6 +11,15 @@
 Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekeeper for your attention. It connects securely to your Google account and automatically classifies your incoming emails into four buckets: Urgent, Needs Reply, FYI, and Ignore, while intelligently drafting responses and managing your calendar.
 
 ---
+## ✨ Features
+
+*   **📥 Automated Inbox Triage** — Categorizes incoming emails into Urgent (🔴), Needs Reply (⚪), FYI (🟢), and Ignore (⚫) based on deep NLP contextual analysis.
+*   **✍️ Contextual Draft Generation** — Instantly crafts tailored, professional response drafts for actionable messages to eliminate manual typing time.
+*   **📅 Smart Calendar Scheduling** — Automatically detects meeting requests, verifies Google Calendar availability, and schedules confirmed events upon approval.
+*   **🛡️ Human-in-the-Loop Gate** — Zero unapproved outbound emails. Users can Regenerate, Edit, or Approve every draft before it hits the outbox.
+*   **🎨 Dual-UI Architecture** — Features a stunning Aurora Glassmorphism landing page and transitions into a high-contrast, low-fatigue dashboard (Earth/Cream tones) optimized for heavy text reading.
+*   **📊 Audit Export** — Generates clean "Proof of Work" reports in Markdown or HTML for record-keeping and workflow tracking.
+---
 
 ## 🛠 Tech Stack
 
