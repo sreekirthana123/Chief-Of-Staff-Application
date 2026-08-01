@@ -96,13 +96,27 @@ Chief-Of-Staff-Application/
 └── TERMS.md                # Terms & Conditions
 ---
 ```
+## 🧠 Why Gemini 2.5 Flash & Human-in-the-Loop?
+
+### ⚡ The Engine: Gemini 2.5 Flash
+Traditional LLMs often struggle with long email threads, either forgetting earlier messages due to context limits or taking too long to generate responses. Gemini 2.5 Flash was explicitly chosen for this architecture because of:
+* **Ultra-Low Latency:** Triage classification and draft generation happen in seconds, ensuring the pipeline doesn't bottleneck when processing a high volume of unread emails.
+* **Massive Context Window:** The agent can easily ingest deeply nested, months-long email chains without hallucinating past details or losing the core thread context.
+* **Cost-to-Performance Ratio:** It delivers high-tier reasoning and contextual understanding at a fraction of the compute cost, making it ideal for a high-frequency automation tool.
+
+### 🛡️ The Safety Net: Human-in-the-Loop (HITL)
+Connecting a fully autonomous, unchecked AI to a personal or corporate inbox is a massive security risk. This system was built from the ground up around a strict **Human-in-the-Loop (HITL)** security model:
+* **AI as an Assistant, Not a Replacement:** The AI does 95% of the heavy lifting—reading, analyzing, prioritizing, and typing. 
+* **Absolute Executive Authority:** The human does the final 5%. The system physically cannot dispatch an email or finalize a calendar event without explicit human click-approval.
+* **Zero Hallucination Risk:** If the AI misunderstands the nuance of an email, the user can instantly click **Regenerate** to try again, or manually **Edit** the draft. Mistakes do not make it to the outbox.
+```
 ## Inside the app
 <img width="1920" height="960" alt="Screenshot (1546)" src="https://github.com/user-attachments/assets/ac29c617-8b35-4b24-b682-7bdeda9f806d" />
 
 <img width="1920" height="975" alt="Screenshot (1530)" src="https://github.com/user-attachments/assets/413cc212-b767-4bf7-8ada-6a446afdeb91" />
 
 ---
-
+```
 ## 📬 Connect & Share Feedback
 
 I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
