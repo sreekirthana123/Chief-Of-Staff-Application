@@ -21,12 +21,16 @@ Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekee
 *   **📊 Audit Export** — Generates clean "Proof of Work" reports in Markdown or HTML for record-keeping and workflow tracking.
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-* **Framework:** Streamlit (Custom Aurora Glassmorphism UI)
-* **AI/LLM:** Google Gemini 2.5 Flash
-* **Processing:** Gmail API & Google Calendar API (OAuth 2.0 Web Flow)
-* **Deployment:** Streamlit Community Cloud
+| Layer | Technology |
+| :--- | :--- |
+| **Backend / Core Logic** | Python 3.x |
+| **AI Engine / LLM** | Google Gemini 2.5 Flash |
+| **Frontend UI** | Streamlit (Custom CSS Injection) |
+| **Cloud Infrastructure** | Google Cloud Platform (GCP) |
+| **Authentication** | OAuth 2.0 Web Flow (PKCE) |
+| **Integrations** | Gmail API, Google Calendar API |
 
 ---
 
