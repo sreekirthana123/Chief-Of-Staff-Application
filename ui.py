@@ -166,8 +166,8 @@ def render_aurora_landing_page(auth_url: str) -> None:
         /* The Aurora Background */
         .stApp {
             background: 
-                radial-gradient(circle at 15% 100%, rgba(75, 240, 252, 0.65) 0%, transparent 65%),
-                radial-gradient(circle at 95% 100%, rgba(80, 235, 236, 0.45) 0%, transparent 40%),
+                radial-gradient(circle at 15% 100%, rgba(75, 240, 252, 0.65) 0%, transparent 95%),
+                radial-gradient(circle at 95% 100%, rgba(80, 235, 236, 0.45) 0%, transparent 20%),
                 radial-gradient(circle at 100% 100%, rgba(79, 242, 252, 0.55) 0%, transparent 30%),
                 linear-gradient(180deg, #020617 0%, #0f172a 35%, #1e3a8a 70%, #174276 100%) !important;
             background-attachment: fixed !important;
