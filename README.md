@@ -44,7 +44,8 @@ Chief-Of-Staff-Application/
 ---
 ```
 ## Inside the app
-<img width="1920" height="920" alt="Screenshot (1529)" src="https://github.com/user-attachments/assets/48fdab39-cd2a-440a-92d5-3c80e0e1df7b" />
+<img width="1920" height="960" alt="Screenshot (1546)" src="https://github.com/user-attachments/assets/ac29c617-8b35-4b24-b682-7bdeda9f806d" />
+
 <img width="1920" height="975" alt="Screenshot (1530)" src="https://github.com/user-attachments/assets/413cc212-b767-4bf7-8ada-6a446afdeb91" />
 
 
