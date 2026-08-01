@@ -185,9 +185,9 @@ def render_aurora_landing_page(auth_url: str) -> None:
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background-image: 
-                radial-gradient(1.5px 1.5px at 20px 30px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 50px 160px, rgba(255,255,255,0.8), rgba(0,0,0,0));
+                radial-gradient(4px 4px at 20px 30px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+                radial-gradient(3px 3px at 40px 70px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+                radial-gradient(5px 5px at 50px 160px, rgba(255,255,255,0.8), rgba(0,0,0,0));
             background-repeat: repeat;
             background-size: 200px 200px;
             opacity: 0.6;
