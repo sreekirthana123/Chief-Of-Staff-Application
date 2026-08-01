@@ -110,12 +110,16 @@ Connecting a fully autonomous, unchecked AI to a personal or corporate inbox is 
 * **Absolute Executive Authority:** The human does the final 5%. The system physically cannot dispatch an email or finalize a calendar event without explicit human click-approval.
 * **Zero Hallucination Risk:** If the AI misunderstands the nuance of an email, the user can instantly click **Regenerate** to try again, or manually **Edit** the draft. Mistakes do not make it to the outbox.
 ```
+---
+```
 ## Inside the app
 <img width="1920" height="960" alt="Screenshot (1546)" src="https://github.com/user-attachments/assets/ac29c617-8b35-4b24-b682-7bdeda9f806d" />
 
 <img width="1920" height="975" alt="Screenshot (1530)" src="https://github.com/user-attachments/assets/413cc212-b767-4bf7-8ada-6a446afdeb91" />
 
 ---
+---
+```
 ```
 ## 📬 Connect & Share Feedback
 
