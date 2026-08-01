@@ -27,7 +27,34 @@ Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekee
 * **`engine.py`:** The core logic engine; securely fetches live email threads and interfaces with Gemini 2.5 Flash to analyze intent, assign priority, and generate professional drafts.
 * **`ui.py`:** The frontend module; houses the custom CSS (including White Glassmorphism and Aurora gradients) and renders the structured landing page.
 * **`PRIVACY.md` & `TERMS.md`:** Documentation explicitly outlining the Human-in-the-Loop security model and data handling protocols.
+---
+``
+## ⚙️ System Pipeline (The 4 Phases)
 
+```text
+  Live Inbox (Gmail API)
+           ↓
+  Phase 1: Triage & Classification
+  (Context, Intent, Urgency Extraction via Gemini)
+           ↓
+  ┌─────────────────────┐      ┌────────────────────────┐
+  │  🔴 Urgent          │      │  ⚪ Needs Reply        │
+  │  (High Priority)    │      │  (Standard Priority)   │
+  └────────┬────────────┘      └──────────┬─────────────┘
+           └──────────────┬───────────────┘
+                          ↓
+  Phase 2: Draft Generation
+  (Gemini 2.5 Flash contextual prompt engineering)
+                          ↓
+  Phase 3: Human-in-the-Loop Approval Gate
+  (Streamlit UI: Render side-by-side drafts)
+           ↓              ↓               ↓
+      [Regenerate]      [Edit]        [Approve]
+           │              │               │
+           └──────────────┴───────────────┤
+                                          ↓
+                               Phase 4: Execution
+                  (Dispatch via Gmail API, Sync to Calendar)
 ---
 
 ## 📂 Folder Structure
