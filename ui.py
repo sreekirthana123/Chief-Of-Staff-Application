@@ -246,7 +246,7 @@ def render_aurora_landing_page(auth_url: str) -> None:
             margin-top: 2rem;
         }
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem); /* Huge main title */
+            font-size: clamp(2.5rem, 5vw, 5.5rem); /* Huge main title */
             font-weight: 900;
             background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
             -webkit-background-clip: text;
