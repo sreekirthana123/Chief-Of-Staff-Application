@@ -59,14 +59,14 @@ Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekee
 ```
 ## 🗺️ Development Roadmap (Spiral Model)
 
-*✅ Phase 1 — GCP Project Setup & OAuth 2.0 Authentication Flow
-*✅ Phase 2 — Gmail API Integration (Thread extraction & parsing)
-*✅ Phase 3 — Gemini Prompt Engineering (Triage logic & Draft generation)
-*✅ Phase 4 — Frontend Dashboard Construction (Streamlit state management)
-*✅ Phase 5 — Human-in-the-Loop implementation (Approve/Edit/Regenerate routing)
-*✅ Phase 6 — Dual-UI Styling (Aurora landing page + High-contrast dashboard)
-*✅ Phase 7 — Google Calendar API Integration & Audit Export
-*🔄 Phase 8 — Upgrade to paid-tier LLM for higher rate limits (Upcoming)
+* ✅ **Phase 1** — GCP Project Setup & OAuth 2.0 Authentication Flow
+* ✅ **Phase 2** — Gmail API Integration (Thread extraction & parsing)
+* ✅ **Phase 3** — Gemini Prompt Engineering (Triage logic & Draft generation)
+* ✅ **Phase 4** — Frontend Dashboard Construction (Streamlit state management)
+* ✅ **Phase 5** — Human-in-the-Loop implementation (Approve/Edit/Regenerate routing)
+* ✅ **Phase 6** — Dual-UI Styling (Aurora landing page + High-contrast dashboard)
+* ✅ **Phase 7** — Google Calendar API Integration & Audit Export
+* 🔄 **Phase 8** — Upgrade to paid-tier LLM for higher rate limits (Upcoming)
 ```
 ```
 ``
