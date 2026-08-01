@@ -57,6 +57,7 @@ Chief of Staff AI is a fully functional AI agent that acts as a ruthless gatekee
                   (Dispatch via Gmail API, Sync to Calendar)
 ---
 
+```
 ## 📂 Folder Structure
 
 ```text
