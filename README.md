@@ -90,6 +90,13 @@ Chief-Of-Staff-Application/
 
 
 ---
+## 👩‍💻 Author
+
+**V Sree Kirthana** <br>
+B.Tech CSE — JBIET, Hyderabad | 2nd Year <br>
+AI/ML Engineer in process <br>
+sreekeerthana64@gmail.com <br><br>
+*Built with curiosity, caffeine, and a lot of debugging ☕🔥*
 
 ## 📬 Connect & Share Feedback
 
