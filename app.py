@@ -1228,10 +1228,21 @@ def render_approval_gate_phase() -> None:
 
             with col_left:
                 st.subheader("Thread History")
-                thread_html = render_thread_html(thread)
-                st.markdown(
-                    f'<div class="thread-box">{thread_html}</div>',
-                    unsafe_allow_html=True,
+                
+                # Combine messages into a clean, unified string
+                thread_history_text = ""
+                for msg in messages:
+                    thread_history_text += f"From: {msg.get('from', 'Unknown')} · {msg.get('date', '')}\n"
+                    thread_history_text += f"{msg.get('body', '').strip()}\n\n"
+                
+                # Render inside a fixed-height, scrollable text area
+                st.text_area(
+                    "Thread Content",
+                    value=thread_history_text.strip(),
+                    height=300,
+                    disabled=True,
+                    label_visibility="collapsed",
+                    key=f"approval_original_{thread_id}"
                 )
 
             with col_right:
