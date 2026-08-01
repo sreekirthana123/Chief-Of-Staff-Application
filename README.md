@@ -88,7 +88,14 @@ Chief-Of-Staff-Application/
 
 <img width="1920" height="975" alt="Screenshot (1530)" src="https://github.com/user-attachments/assets/413cc212-b767-4bf7-8ada-6a446afdeb91" />
 
+---
 
+## 📬 Connect & Share Feedback
+
+I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
+
+* **Connect with me:** [My LinkedIn Profile](https://www.linkedin.com/in/v-sree-kirthana-565b4a367)
+* **Share Feedback:** [Create a GitHub Issue](https://github.com/sreekirthana123/Chief-Of-Staff-Application/issues)
 ---
 ## 👩‍💻 Author
 
@@ -98,15 +105,7 @@ AI/ML Engineer in process <br>
 sreekeerthana64@gmail.com <br><br>
 *Built with curiosity, caffeine, and a lot of debugging ☕🔥*
 
-## 📬 Connect & Share Feedback
-
-I’d love to hear your thoughts on Chief of Staff AI! Whether it’s a feature suggestion, a bug report, or just general feedback, your input helps make this project better.
-
-* **Connect with me:** [My LinkedIn Profile](https://www.linkedin.com/in/v-sree-kirthana-565b4a367)
-* **Share Feedback:** [Create a GitHub Issue](https://github.com/sreekirthana123/Chief-Of-Staff-Application/issues)
 ---
-
-``
 ## 📜 License
 
 &copy; 2026 V. Sree Kirthana. All rights reserved.  
